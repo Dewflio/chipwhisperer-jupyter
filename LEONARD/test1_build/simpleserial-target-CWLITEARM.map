@@ -45,13 +45,17 @@ c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/1
 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-mallocr.o)
                               c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-malloc.o) (_malloc_r)
 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-rand.o)
-                              objdir/network.o (rand)
+                              objdir/network.o (srand)
 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-sbrkr.o)
                               c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-mallocr.o) (_sbrk_r)
+c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-time.o)
+                              objdir/network.o (time)
 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-assert.o)
                               c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-rand.o) (__assert_func)
 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fprintf.o)
                               c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-assert.o) (fiprintf)
+c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-gettimeofdayr.o)
+                              c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-time.o) (_gettimeofday_r)
 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mlock.o)
                               c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-freer.o) (__malloc_lock)
 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf.o)
@@ -110,6 +114,8 @@ c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/1
                               c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fstatr.o) (_fstat)
 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(getpid.o)
                               c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-signalr.o) (_getpid)
+c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(gettod.o)
+                              c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-gettimeofdayr.o) (_gettimeofday)
 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(isatty.o)
                               c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-isattyr.o) (_isatty)
 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(kill.o)
@@ -143,8 +149,10 @@ Discarded input sections
  .text          0x00000000        0x0 objdir/network.o
  .data          0x00000000        0x0 objdir/network.o
  .bss           0x00000000        0x0 objdir/network.o
+ .text.swap     0x00000000        0xa objdir/network.o
  .text.forward_layer
-                0x00000000       0xc0 objdir/network.o
+                0x00000000        0xc objdir/network.o
+ .text.forward  0x00000000       0xd4 objdir/network.o
  .text          0x00000000        0x0 objdir/simpleserial.o
  .data          0x00000000        0x0 objdir/simpleserial.o
  .text.hex_decode
@@ -244,10 +252,12 @@ Discarded input sections
  .text          0x00000000        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-rand.o)
  .data          0x00000000        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-rand.o)
  .bss           0x00000000        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-rand.o)
- .text.srand    0x00000000       0x5c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-rand.o)
  .text          0x00000000        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-sbrkr.o)
  .data          0x00000000        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-sbrkr.o)
  .bss           0x00000000        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-sbrkr.o)
+ .text          0x00000000        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-time.o)
+ .data          0x00000000        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-time.o)
+ .bss           0x00000000        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-time.o)
  .text          0x00000000        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-assert.o)
  .data          0x00000000        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-assert.o)
  .bss           0x00000000        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-assert.o)
@@ -258,6 +268,9 @@ Discarded input sections
  .bss           0x00000000        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fprintf.o)
  .text._fprintf_r
                 0x00000000       0x1a c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fprintf.o)
+ .text          0x00000000        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-gettimeofdayr.o)
+ .data          0x00000000        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-gettimeofdayr.o)
+ .bss           0x00000000        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-gettimeofdayr.o)
  .text          0x00000000        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mlock.o)
  .data          0x00000000        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mlock.o)
  .bss           0x00000000        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mlock.o)
@@ -423,6 +436,9 @@ Discarded input sections
  .text          0x00000000        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(getpid.o)
  .data          0x00000000        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(getpid.o)
  .bss           0x00000000        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(getpid.o)
+ .text          0x00000000        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(gettod.o)
+ .data          0x00000000        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(gettod.o)
+ .bss           0x00000000        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(gettod.o)
  .text          0x00000000        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(isatty.o)
  .data          0x00000000        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(isatty.o)
  .bss           0x00000000        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(isatty.o)
@@ -501,7 +517,7 @@ LOAD c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-e
                 0x08000000                g_pfnVectors
                 0x08000188                . = ALIGN (0x4)
 
-.text           0x08000190     0x3780
+.text           0x08000190     0x38c4
                 0x08000190                . = ALIGN (0x4)
  *(.text)
  .text          0x08000190       0x40 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp/crtbegin.o
@@ -590,390 +606,408 @@ LOAD c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-e
  .text.startup.main
                 0x080010dc       0x28 objdir/main.o
                 0x080010dc                main
+ .text.shuffleArray
+                0x08001104       0x38 objdir/network.o
+                0x08001104                shuffleArray
+ .text.get_random_indices
+                0x0800113c       0x26 objdir/network.o
+                0x0800113c                get_random_indices
  .text.create_neuron
-                0x08001104       0x42 objdir/network.o
-                0x08001104                create_neuron
+                0x08001162       0x42 objdir/network.o
+                0x08001162                create_neuron
  .text.create_layer
-                0x08001146       0x16 objdir/network.o
-                0x08001146                create_layer
+                0x080011a4       0x16 objdir/network.o
+                0x080011a4                create_layer
  .text.create_network
-                0x0800115c       0x14 objdir/network.o
-                0x0800115c                create_network
+                0x080011ba       0x14 objdir/network.o
+                0x080011ba                create_network
  .text.construct_network
-                0x08001170       0xcc objdir/network.o
-                0x08001170                construct_network
- .text.forward  0x0800123c       0xd8 objdir/network.o
-                0x0800123c                forward
- .text.ss_crc   0x08001314       0x2a objdir/simpleserial.o
-                0x08001314                ss_crc
+                0x080011ce       0xcc objdir/network.o
+                0x080011ce                construct_network
+ *fill*         0x0800129a        0x2 
+ .text.forward_shuffled
+                0x0800129c       0xf8 objdir/network.o
+                0x0800129c                forward_shuffled
+ .text.ss_crc   0x08001394       0x2a objdir/simpleserial.o
+                0x08001394                ss_crc
  .text.stuff_data
-                0x0800133e       0x22 objdir/simpleserial.o
-                0x0800133e                stuff_data
+                0x080013be       0x22 objdir/simpleserial.o
+                0x080013be                stuff_data
  .text.unstuff_data
-                0x08001360       0x1e objdir/simpleserial.o
-                0x08001360                unstuff_data
- *fill*         0x0800137e        0x2 
+                0x080013e0       0x1e objdir/simpleserial.o
+                0x080013e0                unstuff_data
+ *fill*         0x080013fe        0x2 
  .text.simpleserial_addcmd
-                0x08001380       0x34 objdir/simpleserial.o
-                0x08001380                simpleserial_addcmd
+                0x08001400       0x34 objdir/simpleserial.o
+                0x08001400                simpleserial_addcmd
  .text.simpleserial_init
-                0x080013b4       0x24 objdir/simpleserial.o
-                0x080013b4                simpleserial_init
+                0x08001434       0x24 objdir/simpleserial.o
+                0x08001434                simpleserial_init
  .text.simpleserial_put
-                0x080013d8       0x56 objdir/simpleserial.o
-                0x080013d8                simpleserial_put
+                0x08001458       0x56 objdir/simpleserial.o
+                0x08001458                simpleserial_put
  .text.check_version
-                0x0800142e       0x1c objdir/simpleserial.o
-                0x0800142e                check_version
- *fill*         0x0800144a        0x2 
+                0x080014ae       0x1c objdir/simpleserial.o
+                0x080014ae                check_version
+ *fill*         0x080014ca        0x2 
  .text.ss_get_commands
-                0x0800144c       0x38 objdir/simpleserial.o
-                0x0800144c                ss_get_commands
+                0x080014cc       0x38 objdir/simpleserial.o
+                0x080014cc                ss_get_commands
  .text.simpleserial_get
-                0x08001484       0xdc objdir/simpleserial.o
-                0x08001484                simpleserial_get
+                0x08001504       0xdc objdir/simpleserial.o
+                0x08001504                simpleserial_get
  .text.platform_init
-                0x08001560       0x80 objdir/stm32f3_hal.o
-                0x08001560                platform_init
+                0x080015e0       0x80 objdir/stm32f3_hal.o
+                0x080015e0                platform_init
  .text.init_uart
-                0x080015e0       0x7c objdir/stm32f3_hal.o
-                0x080015e0                init_uart
+                0x08001660       0x7c objdir/stm32f3_hal.o
+                0x08001660                init_uart
  .text.trigger_setup
-                0x0800165c       0x48 objdir/stm32f3_hal.o
-                0x0800165c                trigger_setup
+                0x080016dc       0x48 objdir/stm32f3_hal.o
+                0x080016dc                trigger_setup
  .text.trigger_high
-                0x080016a4        0xe objdir/stm32f3_hal.o
-                0x080016a4                trigger_high
+                0x08001724        0xe objdir/stm32f3_hal.o
+                0x08001724                trigger_high
  .text.trigger_low
-                0x080016b2        0xe objdir/stm32f3_hal.o
-                0x080016b2                trigger_low
- .text.getch    0x080016c0       0x34 objdir/stm32f3_hal.o
-                0x080016c0                getch
- .text.putch    0x080016f4       0x20 objdir/stm32f3_hal.o
-                0x080016f4                putch
+                0x08001732        0xe objdir/stm32f3_hal.o
+                0x08001732                trigger_low
+ .text.getch    0x08001740       0x34 objdir/stm32f3_hal.o
+                0x08001740                getch
+ .text.putch    0x08001774       0x20 objdir/stm32f3_hal.o
+                0x08001774                putch
  .text.HAL_GetTick
-                0x08001714       0x10 objdir/stm32f3_hal_lowlevel.o
-                0x08001714                HAL_GetTick
+                0x08001794       0x10 objdir/stm32f3_hal_lowlevel.o
+                0x08001794                HAL_GetTick
  .text.HAL_RCC_OscConfig
-                0x08001724      0x4dc objdir/stm32f3_hal_lowlevel.o
-                0x08001724                HAL_RCC_OscConfig
+                0x080017a4      0x4dc objdir/stm32f3_hal_lowlevel.o
+                0x080017a4                HAL_RCC_OscConfig
  .text.HAL_RCC_ClockConfig
-                0x08001c00      0x14c objdir/stm32f3_hal_lowlevel.o
-                0x08001c00                HAL_RCC_ClockConfig
+                0x08001c80      0x14c objdir/stm32f3_hal_lowlevel.o
+                0x08001c80                HAL_RCC_ClockConfig
  .text.HAL_GPIO_Init
-                0x08001d4c      0x188 objdir/stm32f3_hal_lowlevel.o
-                0x08001d4c                HAL_GPIO_Init
+                0x08001dcc      0x188 objdir/stm32f3_hal_lowlevel.o
+                0x08001dcc                HAL_GPIO_Init
  .text.HAL_GPIO_WritePin
-                0x08001ed4        0xa objdir/stm32f3_hal_lowlevel.o
-                0x08001ed4                HAL_GPIO_WritePin
- *fill*         0x08001ede        0x2 
+                0x08001f54        0xa objdir/stm32f3_hal_lowlevel.o
+                0x08001f54                HAL_GPIO_WritePin
+ *fill*         0x08001f5e        0x2 
  .text.UART_SetConfig
-                0x08001ee0      0x1e0 objdir/stm32f3_hal_lowlevel.o
-                0x08001ee0                UART_SetConfig
+                0x08001f60      0x1e0 objdir/stm32f3_hal_lowlevel.o
+                0x08001f60                UART_SetConfig
  .text.UART_WaitOnFlagUntilTimeout
-                0x080020c0       0x58 objdir/stm32f3_hal_lowlevel.o
-                0x080020c0                UART_WaitOnFlagUntilTimeout
+                0x08002140       0x58 objdir/stm32f3_hal_lowlevel.o
+                0x08002140                UART_WaitOnFlagUntilTimeout
  .text.UART_CheckIdleState
-                0x08002118       0x64 objdir/stm32f3_hal_lowlevel.o
-                0x08002118                UART_CheckIdleState
+                0x08002198       0x64 objdir/stm32f3_hal_lowlevel.o
+                0x08002198                UART_CheckIdleState
  .text.HAL_UART_Init
-                0x0800217c       0x56 objdir/stm32f3_hal_lowlevel.o
-                0x0800217c                HAL_UART_Init
+                0x080021fc       0x56 objdir/stm32f3_hal_lowlevel.o
+                0x080021fc                HAL_UART_Init
  .text.HAL_UART_Transmit
-                0x080021d2       0xac objdir/stm32f3_hal_lowlevel.o
-                0x080021d2                HAL_UART_Transmit
+                0x08002252       0xac objdir/stm32f3_hal_lowlevel.o
+                0x08002252                HAL_UART_Transmit
  .text.HAL_UART_Receive
-                0x0800227e       0xd6 objdir/stm32f3_hal_lowlevel.o
-                0x0800227e                HAL_UART_Receive
- .text._sbrk    0x08002354       0x34 objdir/stm32f3_sysmem.o
-                0x08002354                _sbrk
+                0x080022fe       0xd6 objdir/stm32f3_hal_lowlevel.o
+                0x080022fe                HAL_UART_Receive
+ .text._sbrk    0x080023d4       0x34 objdir/stm32f3_sysmem.o
+                0x080023d4                _sbrk
  .text.Reset_Handler
-                0x08002388       0x48 objdir/stm32f3_startup.o
-                0x08002388                Reset_Handler
+                0x08002408       0x48 objdir/stm32f3_startup.o
+                0x08002408                Reset_Handler
  .text.Default_Handler
-                0x080023d0        0x2 objdir/stm32f3_startup.o
-                0x080023d0                DebugMon_Handler
-                0x080023d0                HardFault_Handler
-                0x080023d0                SysTick_Handler
-                0x080023d0                PendSV_Handler
-                0x080023d0                NMI_Handler
-                0x080023d0                UsageFault_Handler
-                0x080023d0                Default_Handler
-                0x080023d0                MemManage_Handler
-                0x080023d0                SVC_Handler
-                0x080023d0                BusFault_Handler
- *fill*         0x080023d2        0x6 
- .text.exp      0x080023d8       0x80 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-w_exp.o)
-                0x080023d8                exp
+                0x08002450        0x2 objdir/stm32f3_startup.o
+                0x08002450                DebugMon_Handler
+                0x08002450                HardFault_Handler
+                0x08002450                SysTick_Handler
+                0x08002450                PendSV_Handler
+                0x08002450                NMI_Handler
+                0x08002450                UsageFault_Handler
+                0x08002450                Default_Handler
+                0x08002450                MemManage_Handler
+                0x08002450                SVC_Handler
+                0x08002450                BusFault_Handler
+ *fill*         0x08002452        0x6 
+ .text.exp      0x08002458       0x80 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-w_exp.o)
+                0x08002458                exp
  .text.__ieee754_exp
-                0x08002458      0x3a4 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-e_exp.o)
-                0x08002458                __ieee754_exp
- .text.finite   0x080027fc        0xc c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-s_finite.o)
-                0x080027fc                finite
- .text.__errno  0x08002808        0xc c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-errno.o)
-                0x08002808                __errno
+                0x080024d8      0x3a4 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-e_exp.o)
+                0x080024d8                __ieee754_exp
+ .text.finite   0x0800287c        0xc c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-s_finite.o)
+                0x0800287c                finite
+ .text.__errno  0x08002888        0xc c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-errno.o)
+                0x08002888                __errno
  .text.__libc_init_array
-                0x08002814       0x48 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-init.o)
-                0x08002814                __libc_init_array
- .text.malloc   0x0800285c       0x10 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-malloc.o)
-                0x0800285c                malloc
- .text.memcpy   0x0800286c       0x1c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memcpy-stub.o)
-                0x0800286c                memcpy
- .text.memset   0x08002888       0x10 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memset.o)
-                0x08002888                memset
- .text._free_r  0x08002898       0x94 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-freer.o)
-                0x08002898                _free_r
+                0x08002894       0x48 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-init.o)
+                0x08002894                __libc_init_array
+ .text.malloc   0x080028dc       0x10 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-malloc.o)
+                0x080028dc                malloc
+ .text.memcpy   0x080028ec       0x1c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memcpy-stub.o)
+                0x080028ec                memcpy
+ .text.memset   0x08002908       0x10 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memset.o)
+                0x08002908                memset
+ .text._free_r  0x08002918       0x94 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-freer.o)
+                0x08002918                _free_r
  .text._malloc_r
-                0x0800292c       0xb4 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-mallocr.o)
-                0x0800292c                _malloc_r
- .text.rand     0x080029e0       0x7c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-rand.o)
-                0x080029e0                rand
- .text._sbrk_r  0x08002a5c       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-sbrkr.o)
-                0x08002a5c                _sbrk_r
+                0x080029ac       0xb4 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-mallocr.o)
+                0x080029ac                _malloc_r
+ .text.srand    0x08002a60       0x5c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-rand.o)
+                0x08002a60                srand
+ .text.rand     0x08002abc       0x7c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-rand.o)
+                0x08002abc                rand
+ .text._sbrk_r  0x08002b38       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-sbrkr.o)
+                0x08002b38                _sbrk_r
+ .text.time     0x08002b58       0x34 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-time.o)
+                0x08002b58                time
  .text.__assert_func
-                0x08002a7c       0x3c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-assert.o)
-                0x08002a7c                __assert_func
- .text.fprintf  0x08002ab8       0x24 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fprintf.o)
-                0x08002ab8                fiprintf
-                0x08002ab8                fprintf
+                0x08002b8c       0x3c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-assert.o)
+                0x08002b8c                __assert_func
+ .text.fprintf  0x08002bc8       0x24 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fprintf.o)
+                0x08002bc8                fiprintf
+                0x08002bc8                fprintf
+ .text._gettimeofday_r
+                0x08002bec       0x24 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-gettimeofdayr.o)
+                0x08002bec                _gettimeofday_r
  .text.__malloc_lock
-                0x08002adc        0xc c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mlock.o)
-                0x08002adc                __malloc_lock
+                0x08002c10        0xc c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mlock.o)
+                0x08002c10                __malloc_lock
  .text.__malloc_unlock
-                0x08002ae8        0xc c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mlock.o)
-                0x08002ae8                __malloc_unlock
+                0x08002c1c        0xc c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mlock.o)
+                0x08002c1c                __malloc_unlock
  .text.__sfputc_r
-                0x08002af4       0x2a c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf.o)
+                0x08002c28       0x2a c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf.o)
  .text.__sfputs_r
-                0x08002b1e       0x24 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf.o)
-                0x08002b1e                __sfputs_r
- *fill*         0x08002b42        0x2 
+                0x08002c52       0x24 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf.o)
+                0x08002c52                __sfputs_r
+ *fill*         0x08002c76        0x2 
  .text._vfprintf_r
-                0x08002b44      0x260 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf.o)
-                0x08002b44                _vfprintf_r
-                0x08002b44                _vfiprintf_r
+                0x08002c78      0x260 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf.o)
+                0x08002c78                _vfprintf_r
+                0x08002c78                _vfiprintf_r
  .text._printf_common
-                0x08002da4       0xda c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
-                0x08002da4                _printf_common
- *fill*         0x08002e7e        0x2 
+                0x08002ed8       0xda c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x08002ed8                _printf_common
+ *fill*         0x08002fb2        0x2 
  .text._printf_i
-                0x08002e80      0x24c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
-                0x08002e80                _printf_i
+                0x08002fb4      0x24c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x08002fb4                _printf_i
  .text.__swbuf_r
-                0x080030cc       0xa4 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-wbuf.o)
-                0x080030cc                __swbuf_r
+                0x08003200       0xa4 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-wbuf.o)
+                0x08003200                __swbuf_r
  .text.__swsetup_r
-                0x08003170       0xdc c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-wsetup.o)
-                0x08003170                __swsetup_r
- .text.abort    0x0800324c        0xe c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-abort.o)
-                0x0800324c                abort
- *fill*         0x0800325a        0x2 
+                0x080032a4       0xdc c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-wsetup.o)
+                0x080032a4                __swsetup_r
+ .text.abort    0x08003380        0xe c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-abort.o)
+                0x08003380                abort
+ *fill*         0x0800338e        0x2 
  .text.__sflush_r
-                0x0800325c      0x104 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fflush.o)
-                0x0800325c                __sflush_r
+                0x08003390      0x104 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fflush.o)
+                0x08003390                __sflush_r
  .text._fflush_r
-                0x08003360       0x78 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fflush.o)
-                0x08003360                _fflush_r
- .text.std      0x080033d8       0x48 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-findfp.o)
+                0x08003494       0x78 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fflush.o)
+                0x08003494                _fflush_r
+ .text.std      0x0800350c       0x48 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-findfp.o)
  .text._cleanup_r
-                0x08003420        0xc c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-findfp.o)
-                0x08003420                _cleanup_r
+                0x08003554        0xc c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-findfp.o)
+                0x08003554                _cleanup_r
  .text.__sfmoreglue
-                0x0800342c       0x2c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-findfp.o)
-                0x0800342c                __sfmoreglue
+                0x08003560       0x2c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-findfp.o)
+                0x08003560                __sfmoreglue
  .text.__sfp_lock_acquire
-                0x08003458        0xc c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-findfp.o)
-                0x08003458                __sfp_lock_acquire
+                0x0800358c        0xc c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-findfp.o)
+                0x0800358c                __sfp_lock_acquire
  .text.__sfp_lock_release
-                0x08003464        0xc c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-findfp.o)
-                0x08003464                __sfp_lock_release
+                0x08003598        0xc c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-findfp.o)
+                0x08003598                __sfp_lock_release
  .text.__sinit_lock_acquire
-                0x08003470        0xc c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-findfp.o)
-                0x08003470                __sinit_lock_acquire
+                0x080035a4        0xc c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-findfp.o)
+                0x080035a4                __sinit_lock_acquire
  .text.__sinit_lock_release
-                0x0800347c        0xc c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-findfp.o)
-                0x0800347c                __sinit_lock_release
- .text.__sinit  0x08003488       0x70 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-findfp.o)
-                0x08003488                __sinit
- .text.__sfp    0x080034f8       0x8c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-findfp.o)
-                0x080034f8                __sfp
+                0x080035b0        0xc c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-findfp.o)
+                0x080035b0                __sinit_lock_release
+ .text.__sinit  0x080035bc       0x70 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-findfp.o)
+                0x080035bc                __sinit
+ .text.__sfp    0x0800362c       0x8c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-findfp.o)
+                0x0800362c                __sfp
  .text._fwalk_reent
-                0x08003584       0x3e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fwalk.o)
-                0x08003584                _fwalk_reent
+                0x080036b8       0x3e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fwalk.o)
+                0x080036b8                _fwalk_reent
  .text.__retarget_lock_init_recursive
-                0x080035c2        0x2 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lock.o)
-                0x080035c2                __retarget_lock_init_recursive
+                0x080036f6        0x2 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lock.o)
+                0x080036f6                __retarget_lock_init_recursive
  .text.__retarget_lock_acquire_recursive
-                0x080035c4        0x2 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lock.o)
-                0x080035c4                __retarget_lock_acquire_recursive
+                0x080036f8        0x2 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lock.o)
+                0x080036f8                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x080035c6        0x2 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lock.o)
-                0x080035c6                __retarget_lock_release_recursive
+                0x080036fa        0x2 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lock.o)
+                0x080036fa                __retarget_lock_release_recursive
  .text.__swhatbuf_r
-                0x080035c8       0x4a c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-makebuf.o)
-                0x080035c8                __swhatbuf_r
- *fill*         0x08003612        0x2 
+                0x080036fc       0x4a c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-makebuf.o)
+                0x080036fc                __swhatbuf_r
+ *fill*         0x08003746        0x2 
  .text.__smakebuf_r
-                0x08003614       0x80 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-makebuf.o)
-                0x08003614                __smakebuf_r
+                0x08003748       0x80 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-makebuf.o)
+                0x08003748                __smakebuf_r
  .text._raise_r
-                0x08003694       0x50 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-signal.o)
-                0x08003694                _raise_r
- .text.raise    0x080036e4       0x10 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-signal.o)
-                0x080036e4                raise
- .text._kill_r  0x080036f4       0x24 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-signalr.o)
-                0x080036f4                _kill_r
+                0x080037c8       0x50 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-signal.o)
+                0x080037c8                _raise_r
+ .text.raise    0x08003818       0x10 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-signal.o)
+                0x08003818                raise
+ .text._kill_r  0x08003828       0x24 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-signalr.o)
+                0x08003828                _kill_r
  .text._getpid_r
-                0x08003718        0x4 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-signalr.o)
-                0x08003718                _getpid_r
- .text.__sread  0x0800371c       0x22 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-stdio.o)
-                0x0800371c                __sread
+                0x0800384c        0x4 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-signalr.o)
+                0x0800384c                _getpid_r
+ .text.__sread  0x08003850       0x22 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-stdio.o)
+                0x08003850                __sread
  .text.__swrite
-                0x0800373e       0x38 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-stdio.o)
-                0x0800373e                __swrite
- .text.__sseek  0x08003776       0x24 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-stdio.o)
-                0x08003776                __sseek
+                0x08003872       0x38 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-stdio.o)
+                0x08003872                __swrite
+ .text.__sseek  0x080038aa       0x24 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-stdio.o)
+                0x080038aa                __sseek
  .text.__sclose
-                0x0800379a        0x8 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-stdio.o)
-                0x0800379a                __sclose
- *fill*         0x080037a2        0x2 
+                0x080038ce        0x8 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-stdio.o)
+                0x080038ce                __sclose
+ *fill*         0x080038d6        0x2 
  .text._write_r
-                0x080037a4       0x24 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-writer.o)
-                0x080037a4                _write_r
+                0x080038d8       0x24 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-writer.o)
+                0x080038d8                _write_r
  .text._close_r
-                0x080037c8       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-closer.o)
-                0x080037c8                _close_r
+                0x080038fc       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-closer.o)
+                0x080038fc                _close_r
  .text._fstat_r
-                0x080037e8       0x24 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fstatr.o)
-                0x080037e8                _fstat_r
+                0x0800391c       0x24 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fstatr.o)
+                0x0800391c                _fstat_r
  .text._isatty_r
-                0x0800380c       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-isattyr.o)
-                0x0800380c                _isatty_r
+                0x08003940       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-isattyr.o)
+                0x08003940                _isatty_r
  .text._lseek_r
-                0x0800382c       0x24 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lseekr.o)
-                0x0800382c                _lseek_r
- .text._read_r  0x08003850       0x24 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-readr.o)
-                0x08003850                _read_r
- .text._close   0x08003874       0x10 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(close.o)
-                0x08003874                _close
- .text._fstat   0x08003884       0x10 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(fstat.o)
-                0x08003884                _fstat
- .text._getpid  0x08003894       0x10 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(getpid.o)
-                0x08003894                _getpid
- .text._isatty  0x080038a4       0x10 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(isatty.o)
-                0x080038a4                _isatty
- .text._kill    0x080038b4       0x10 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(kill.o)
-                0x080038b4                _kill
- .text._lseek   0x080038c4       0x10 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(lseek.o)
-                0x080038c4                _lseek
- .text._read    0x080038d4       0x10 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(read.o)
-                0x080038d4                _read
- .text._write   0x080038e4       0x10 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(write.o)
-                0x080038e4                _write
- .text._exit    0x080038f4        0x4 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(_exit.o)
-                0x080038f4                _exit
+                0x08003960       0x24 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lseekr.o)
+                0x08003960                _lseek_r
+ .text._read_r  0x08003984       0x24 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-readr.o)
+                0x08003984                _read_r
+ .text._close   0x080039a8       0x10 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(close.o)
+                0x080039a8                _close
+ .text._fstat   0x080039b8       0x10 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(fstat.o)
+                0x080039b8                _fstat
+ .text._getpid  0x080039c8       0x10 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(getpid.o)
+                0x080039c8                _getpid
+ .text._gettimeofday
+                0x080039d8       0x10 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(gettod.o)
+                0x080039d8                _gettimeofday
+ .text._isatty  0x080039e8       0x10 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(isatty.o)
+                0x080039e8                _isatty
+ .text._kill    0x080039f8       0x10 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(kill.o)
+                0x080039f8                _kill
+ .text._lseek   0x08003a08       0x10 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(lseek.o)
+                0x08003a08                _lseek
+ .text._read    0x08003a18       0x10 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(read.o)
+                0x08003a18                _read
+ .text._write   0x08003a28       0x10 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(write.o)
+                0x08003a28                _write
+ .text._exit    0x08003a38        0x4 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(_exit.o)
+                0x08003a38                _exit
  *(.glue_7)
- .glue_7        0x080038f8        0x0 linker stubs
+ .glue_7        0x08003a3c        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x080038f8        0x0 linker stubs
+ .glue_7t       0x08003a3c        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x080038f8        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp/crtbegin.o
+ .eh_frame      0x08003a3c        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp/crtbegin.o
  *(.init)
- .init          0x080038f8        0x4 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp/crti.o
-                0x080038f8                _init
- .init          0x080038fc        0x8 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp/crtn.o
+ .init          0x08003a3c        0x4 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp/crti.o
+                0x08003a3c                _init
+ .init          0x08003a40        0x8 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp/crtn.o
  *(.fini)
- .fini          0x08003904        0x4 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp/crti.o
-                0x08003904                _fini
- .fini          0x08003908        0x8 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp/crtn.o
-                0x08003910                . = ALIGN (0x4)
-                0x08003910                _etext = .
+ .fini          0x08003a48        0x4 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp/crti.o
+                0x08003a48                _fini
+ .fini          0x08003a4c        0x8 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp/crtn.o
+                0x08003a54                . = ALIGN (0x4)
+                0x08003a54                _etext = .
 
-.vfp11_veneer   0x08003910        0x0
- .vfp11_veneer  0x08003910        0x0 linker stubs
+.vfp11_veneer   0x08003a54        0x0
+ .vfp11_veneer  0x08003a54        0x0 linker stubs
 
-.v4_bx          0x08003910        0x0
- .v4_bx         0x08003910        0x0 linker stubs
+.v4_bx          0x08003a54        0x0
+ .v4_bx         0x08003a54        0x0 linker stubs
 
-.iplt           0x08003910        0x0
- .iplt          0x08003910        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp/crtbegin.o
+.iplt           0x08003a54        0x0
+ .iplt          0x08003a54        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp/crtbegin.o
 
-.rodata         0x08003910      0x1b0
-                0x08003910                . = ALIGN (0x4)
+.rodata         0x08003a58      0x1b0
+                0x08003a58                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x08003910       0x10 objdir/main.o
- .rodata        0x08003920        0x3 objdir/stm32f3_hal_lowlevel.o
+ .rodata        0x08003a58       0x10 objdir/main.o
+ .rodata        0x08003a68        0x3 objdir/stm32f3_hal_lowlevel.o
  *(.rodata*)
- *fill*         0x08003923        0x5 
- .rodata.halF   0x08003928       0x10 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-e_exp.o)
- .rodata.ln2HI  0x08003938       0x10 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-e_exp.o)
- .rodata.ln2LO  0x08003948       0x10 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-e_exp.o)
+ *fill*         0x08003a6b        0x5 
+ .rodata.halF   0x08003a70       0x10 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-e_exp.o)
+ .rodata.ln2HI  0x08003a80       0x10 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-e_exp.o)
+ .rodata.ln2LO  0x08003a90       0x10 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-e_exp.o)
  .rodata._global_impure_ptr
-                0x08003958        0x4 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-impure.o)
-                0x08003958                _global_impure_ptr
+                0x08003aa0        0x4 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-impure.o)
+                0x08003aa0                _global_impure_ptr
  .rodata.srand.str1.1
-                0x0800395c       0x94 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-rand.o)
+                0x08003aa4       0x94 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-rand.o)
  .rodata.__assert_func.str1.1
-                0x080039f0       0x3c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-assert.o)
+                0x08003b38       0x3c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-assert.o)
                                  0x3d (size before relaxing)
  .rodata._vfprintf_r.str1.1
-                0x08003a2c       0x11 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf.o)
+                0x08003b74       0x11 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf.o)
  .rodata._printf_i.str1.1
-                0x08003a3d       0x22 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
- *fill*         0x08003a5f        0x1 
+                0x08003b85       0x22 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ *fill*         0x08003ba7        0x1 
  .rodata.__sf_fake_stderr
-                0x08003a60       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-findfp.o)
-                0x08003a60                __sf_fake_stderr
+                0x08003ba8       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-findfp.o)
+                0x08003ba8                __sf_fake_stderr
  .rodata.__sf_fake_stdin
-                0x08003a80       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-findfp.o)
-                0x08003a80                __sf_fake_stdin
+                0x08003bc8       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-findfp.o)
+                0x08003bc8                __sf_fake_stdin
  .rodata.__sf_fake_stdout
-                0x08003aa0       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-findfp.o)
-                0x08003aa0                __sf_fake_stdout
-                0x08003ac0                . = ALIGN (0x4)
+                0x08003be8       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-findfp.o)
+                0x08003be8                __sf_fake_stdout
+                0x08003c08                . = ALIGN (0x4)
 
-.rel.dyn        0x08003ac0        0x0
- .rel.iplt      0x08003ac0        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp/crtbegin.o
+.rel.dyn        0x08003c08        0x0
+ .rel.iplt      0x08003c08        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp/crtbegin.o
 
-.ARM.extab      0x08003ac0        0x0
-                0x08003ac0                . = ALIGN (0x4)
+.ARM.extab      0x08003c08        0x0
+                0x08003c08                . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08003ac0                . = ALIGN (0x4)
+                0x08003c08                . = ALIGN (0x4)
 
-.ARM            0x08003ac0        0x0
-                0x08003ac0                . = ALIGN (0x4)
-                0x08003ac0                __exidx_start = .
+.ARM            0x08003c08        0x0
+                0x08003c08                . = ALIGN (0x4)
+                0x08003c08                __exidx_start = .
  *(.ARM.exidx*)
-                0x08003ac0                __exidx_end = .
-                0x08003ac0                . = ALIGN (0x4)
+                0x08003c08                __exidx_end = .
+                0x08003c08                . = ALIGN (0x4)
 
-.preinit_array  0x08003ac0        0x0
-                0x08003ac0                . = ALIGN (0x4)
-                0x08003ac0                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x08003c08        0x0
+                0x08003c08                . = ALIGN (0x4)
+                0x08003c08                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08003ac0                PROVIDE (__preinit_array_end = .)
-                0x08003ac0                . = ALIGN (0x4)
+                0x08003c08                PROVIDE (__preinit_array_end = .)
+                0x08003c08                . = ALIGN (0x4)
 
-.init_array     0x08003ac0        0x4
-                0x08003ac0                . = ALIGN (0x4)
-                0x08003ac0                PROVIDE (__init_array_start = .)
+.init_array     0x08003c08        0x4
+                0x08003c08                . = ALIGN (0x4)
+                0x08003c08                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x08003ac0        0x4 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp/crtbegin.o
-                0x08003ac4                PROVIDE (__init_array_end = .)
-                0x08003ac4                . = ALIGN (0x4)
+ .init_array    0x08003c08        0x4 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp/crtbegin.o
+                0x08003c0c                PROVIDE (__init_array_end = .)
+                0x08003c0c                . = ALIGN (0x4)
 
-.fini_array     0x08003ac4        0x4
-                0x08003ac4                . = ALIGN (0x4)
+.fini_array     0x08003c0c        0x4
+                0x08003c0c                . = ALIGN (0x4)
                 [!provide]                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08003ac4        0x4 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp/crtbegin.o
+ .fini_array    0x08003c0c        0x4 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp/crtbegin.o
                 [!provide]                PROVIDE (__fini_array_end = .)
-                0x08003ac8                . = ALIGN (0x4)
-                0x08003ac8                _sidata = LOADADDR (.data)
+                0x08003c10                . = ALIGN (0x4)
+                0x08003c10                _sidata = LOADADDR (.data)
 
-.data           0x20000000       0x68 load address 0x08003ac8
+.data           0x20000000       0x68 load address 0x08003c10
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _sdata = .
  *(.data)
@@ -990,11 +1024,11 @@ LOAD c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-e
                 0x20000068                . = ALIGN (0x4)
                 0x20000068                _edata = .
 
-.igot.plt       0x20000068        0x0 load address 0x08003b30
+.igot.plt       0x20000068        0x0 load address 0x08003c78
  .igot.plt      0x20000068        0x0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp/crtbegin.o
                 0x20000068                . = ALIGN (0x4)
 
-.bss            0x20000068      0x16c load address 0x08003b30
+.bss            0x20000068      0x16c load address 0x08003c78
                 0x20000068                _sbss = .
                 0x20000068                __bss_start__ = _sbss
  *(.bss)
@@ -1031,7 +1065,7 @@ LOAD c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-e
                 0x200001d4                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x200001d4      0x404 load address 0x08003b30
+                0x200001d4      0x404 load address 0x08003c78
                 0x200001d8                . = ALIGN (0x8)
  *fill*         0x200001d4        0x4 
                 0x200001d8                PROVIDE (end = .)
@@ -1112,145 +1146,151 @@ LOAD c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-e
  .ARM.attributes
                 0x000004c7       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-sbrkr.o)
  .ARM.attributes
-                0x000004f5       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-assert.o)
+                0x000004f5       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-time.o)
  .ARM.attributes
-                0x00000523       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fprintf.o)
+                0x00000523       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-assert.o)
  .ARM.attributes
-                0x00000551       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mlock.o)
+                0x00000551       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fprintf.o)
  .ARM.attributes
-                0x0000057f       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf.o)
+                0x0000057f       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-gettimeofdayr.o)
  .ARM.attributes
-                0x000005ad       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x000005ad       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mlock.o)
  .ARM.attributes
-                0x000005db       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-reent.o)
+                0x000005db       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf.o)
  .ARM.attributes
-                0x00000609       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-wbuf.o)
+                0x00000609       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
  .ARM.attributes
-                0x00000637       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-wsetup.o)
+                0x00000637       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-reent.o)
  .ARM.attributes
-                0x00000665       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-abort.o)
+                0x00000665       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-wbuf.o)
  .ARM.attributes
-                0x00000693       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fflush.o)
+                0x00000693       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-wsetup.o)
  .ARM.attributes
-                0x000006c1       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-findfp.o)
+                0x000006c1       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-abort.o)
  .ARM.attributes
-                0x000006ef       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fwalk.o)
+                0x000006ef       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fflush.o)
  .ARM.attributes
-                0x0000071d       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lock.o)
+                0x0000071d       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-findfp.o)
  .ARM.attributes
-                0x0000074b       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-makebuf.o)
+                0x0000074b       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fwalk.o)
  .ARM.attributes
-                0x00000779       0x1c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memchr.o)
+                0x00000779       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lock.o)
  .ARM.attributes
-                0x00000795       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-signal.o)
+                0x000007a7       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-makebuf.o)
  .ARM.attributes
-                0x000007c3       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-signalr.o)
+                0x000007d5       0x1c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memchr.o)
  .ARM.attributes
-                0x000007f1       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-stdio.o)
+                0x000007f1       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-signal.o)
  .ARM.attributes
-                0x0000081f       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-writer.o)
+                0x0000081f       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-signalr.o)
  .ARM.attributes
-                0x0000084d       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-closer.o)
+                0x0000084d       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-stdio.o)
  .ARM.attributes
-                0x0000087b       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fstatr.o)
+                0x0000087b       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-writer.o)
  .ARM.attributes
-                0x000008a9       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-isattyr.o)
+                0x000008a9       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-closer.o)
  .ARM.attributes
-                0x000008d7       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lseekr.o)
+                0x000008d7       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fstatr.o)
  .ARM.attributes
-                0x00000905       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-readr.o)
+                0x00000905       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-isattyr.o)
  .ARM.attributes
-                0x00000933       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(close.o)
+                0x00000933       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lseekr.o)
  .ARM.attributes
-                0x00000961       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(fstat.o)
+                0x00000961       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-readr.o)
  .ARM.attributes
-                0x0000098f       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(getpid.o)
+                0x0000098f       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(close.o)
  .ARM.attributes
-                0x000009bd       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(isatty.o)
+                0x000009bd       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(fstat.o)
  .ARM.attributes
-                0x000009eb       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(kill.o)
+                0x000009eb       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(getpid.o)
  .ARM.attributes
-                0x00000a19       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(lseek.o)
+                0x00000a19       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(gettod.o)
  .ARM.attributes
-                0x00000a47       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(read.o)
+                0x00000a47       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(isatty.o)
  .ARM.attributes
-                0x00000a75       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(write.o)
+                0x00000a75       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(kill.o)
  .ARM.attributes
-                0x00000aa3       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(_exit.o)
+                0x00000aa3       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(lseek.o)
  .ARM.attributes
-                0x00000ad1       0x1e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp/crtn.o
+                0x00000ad1       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(read.o)
+ .ARM.attributes
+                0x00000aff       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(write.o)
+ .ARM.attributes
+                0x00000b2d       0x2e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(_exit.o)
+ .ARM.attributes
+                0x00000b5b       0x1e c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp/crtn.o
 OUTPUT(simpleserial-target-CWLITEARM.elf elf32-littlearm)
 LOAD linker stubs
 LOAD c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a
 LOAD c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a
 LOAD c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp\libgcc.a
 
-.debug_info     0x00000000     0x475d
+.debug_info     0x00000000     0x4a04
  .debug_info    0x00000000      0x417 objdir/main.o
- .debug_info    0x00000417      0x5d1 objdir/network.o
- .debug_info    0x000009e8      0x815 objdir/simpleserial.o
- .debug_info    0x000011fd      0xe88 objdir/stm32f3_hal.o
- .debug_info    0x00002085     0x25bf objdir/stm32f3_hal_lowlevel.o
- .debug_info    0x00004644      0x119 objdir/stm32f3_sysmem.o
+ .debug_info    0x00000417      0x878 objdir/network.o
+ .debug_info    0x00000c8f      0x815 objdir/simpleserial.o
+ .debug_info    0x000014a4      0xe88 objdir/stm32f3_hal.o
+ .debug_info    0x0000232c     0x25bf objdir/stm32f3_hal_lowlevel.o
+ .debug_info    0x000048eb      0x119 objdir/stm32f3_sysmem.o
 
-.debug_abbrev   0x00000000      0xccf
+.debug_abbrev   0x00000000      0xd78
  .debug_abbrev  0x00000000      0x155 objdir/main.o
- .debug_abbrev  0x00000155      0x198 objdir/network.o
- .debug_abbrev  0x000002ed      0x22d objdir/simpleserial.o
- .debug_abbrev  0x0000051a      0x225 objdir/stm32f3_hal.o
- .debug_abbrev  0x0000073f      0x4af objdir/stm32f3_hal_lowlevel.o
- .debug_abbrev  0x00000bee       0xe1 objdir/stm32f3_sysmem.o
+ .debug_abbrev  0x00000155      0x241 objdir/network.o
+ .debug_abbrev  0x00000396      0x22d objdir/simpleserial.o
+ .debug_abbrev  0x000005c3      0x225 objdir/stm32f3_hal.o
+ .debug_abbrev  0x000007e8      0x4af objdir/stm32f3_hal_lowlevel.o
+ .debug_abbrev  0x00000c97       0xe1 objdir/stm32f3_sysmem.o
 
-.debug_loc      0x00000000     0x28c4
+.debug_loc      0x00000000     0x2b2a
  .debug_loc     0x00000000       0xec objdir/main.o
- .debug_loc     0x000000ec      0x65d objdir/network.o
- .debug_loc     0x00000749      0x8f2 objdir/simpleserial.o
- .debug_loc     0x0000103b      0x1a4 objdir/stm32f3_hal.o
- .debug_loc     0x000011df     0x1671 objdir/stm32f3_hal_lowlevel.o
- .debug_loc     0x00002850       0x74 objdir/stm32f3_sysmem.o
+ .debug_loc     0x000000ec      0x8c3 objdir/network.o
+ .debug_loc     0x000009af      0x8f2 objdir/simpleserial.o
+ .debug_loc     0x000012a1      0x1a4 objdir/stm32f3_hal.o
+ .debug_loc     0x00001445     0x1671 objdir/stm32f3_hal_lowlevel.o
+ .debug_loc     0x00002ab6       0x74 objdir/stm32f3_sysmem.o
 
-.debug_aranges  0x00000000      0x1f0
+.debug_aranges  0x00000000      0x210
  .debug_aranges
                 0x00000000       0x28 objdir/main.o
  .debug_aranges
-                0x00000028       0x48 objdir/network.o
+                0x00000028       0x68 objdir/network.o
  .debug_aranges
-                0x00000070       0x70 objdir/simpleserial.o
+                0x00000090       0x70 objdir/simpleserial.o
  .debug_aranges
-                0x000000e0       0x60 objdir/stm32f3_hal.o
+                0x00000100       0x60 objdir/stm32f3_hal.o
  .debug_aranges
-                0x00000140       0x90 objdir/stm32f3_hal_lowlevel.o
+                0x00000160       0x90 objdir/stm32f3_hal_lowlevel.o
  .debug_aranges
-                0x000001d0       0x20 objdir/stm32f3_sysmem.o
+                0x000001f0       0x20 objdir/stm32f3_sysmem.o
 
-.debug_ranges   0x00000000      0x438
+.debug_ranges   0x00000000      0x4a8
  .debug_ranges  0x00000000       0x18 objdir/main.o
- .debug_ranges  0x00000018       0x70 objdir/network.o
- .debug_ranges  0x00000088       0xf0 objdir/simpleserial.o
- .debug_ranges  0x00000178       0xb0 objdir/stm32f3_hal.o
- .debug_ranges  0x00000228      0x200 objdir/stm32f3_hal_lowlevel.o
- .debug_ranges  0x00000428       0x10 objdir/stm32f3_sysmem.o
+ .debug_ranges  0x00000018       0xe0 objdir/network.o
+ .debug_ranges  0x000000f8       0xf0 objdir/simpleserial.o
+ .debug_ranges  0x000001e8       0xb0 objdir/stm32f3_hal.o
+ .debug_ranges  0x00000298      0x200 objdir/stm32f3_hal_lowlevel.o
+ .debug_ranges  0x00000498       0x10 objdir/stm32f3_sysmem.o
 
-.debug_line     0x00000000     0x29f5
+.debug_line     0x00000000     0x2c18
  .debug_line    0x00000000      0x1ac objdir/main.o
- .debug_line    0x000001ac      0x5f7 objdir/network.o
- .debug_line    0x000007a3      0x660 objdir/simpleserial.o
- .debug_line    0x00000e03      0x3c5 objdir/stm32f3_hal.o
- .debug_line    0x000011c8     0x1726 objdir/stm32f3_hal_lowlevel.o
- .debug_line    0x000028ee      0x107 objdir/stm32f3_sysmem.o
+ .debug_line    0x000001ac      0x81a objdir/network.o
+ .debug_line    0x000009c6      0x660 objdir/simpleserial.o
+ .debug_line    0x00001026      0x3c5 objdir/stm32f3_hal.o
+ .debug_line    0x000013eb     0x1726 objdir/stm32f3_hal_lowlevel.o
+ .debug_line    0x00002b11      0x107 objdir/stm32f3_sysmem.o
 
-.debug_str      0x00000000     0x14c7
- .debug_str     0x00000000      0x2a3 objdir/main.o
-                                0x310 (size before relaxing)
- .debug_str     0x000002a3       0xf2 objdir/network.o
-                                0x363 (size before relaxing)
- .debug_str     0x00000395      0x133 objdir/simpleserial.o
+.debug_str      0x00000000     0x151e
+ .debug_str     0x00000000      0x2ac objdir/main.o
+                                0x319 (size before relaxing)
+ .debug_str     0x000002ac      0x145 objdir/network.o
+                                0x3c9 (size before relaxing)
+ .debug_str     0x000003f1      0x12e objdir/simpleserial.o
                                 0x36d (size before relaxing)
- .debug_str     0x000004c8      0x6f8 objdir/stm32f3_hal.o
+ .debug_str     0x0000051f      0x6f8 objdir/stm32f3_hal.o
                                 0x952 (size before relaxing)
- .debug_str     0x00000bc0      0x8b5 objdir/stm32f3_hal_lowlevel.o
+ .debug_str     0x00000c17      0x8b5 objdir/stm32f3_hal_lowlevel.o
                                0x11b7 (size before relaxing)
- .debug_str     0x00001475       0x52 objdir/stm32f3_sysmem.o
+ .debug_str     0x000014cc       0x52 objdir/stm32f3_sysmem.o
                                 0x210 (size before relaxing)
 
 .comment        0x00000000       0x4d
@@ -1262,67 +1302,70 @@ LOAD c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-e
  .comment       0x0000004d       0x4e objdir/stm32f3_hal_lowlevel.o
  .comment       0x0000004d       0x4e objdir/stm32f3_sysmem.o
 
-.debug_frame    0x00000000     0x1490
+.debug_frame    0x00000000     0x1568
  .debug_frame   0x00000000       0x4c objdir/main.o
- .debug_frame   0x0000004c       0xf8 objdir/network.o
- .debug_frame   0x00000144      0x154 objdir/simpleserial.o
- .debug_frame   0x00000298       0xec objdir/stm32f3_hal.o
- .debug_frame   0x00000384      0x1d4 objdir/stm32f3_hal_lowlevel.o
- .debug_frame   0x00000558       0x28 objdir/stm32f3_sysmem.o
- .debug_frame   0x00000580       0x30 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-w_exp.o)
- .debug_frame   0x000005b0       0x58 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-e_exp.o)
- .debug_frame   0x00000608       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-s_finite.o)
- .debug_frame   0x00000628       0x24 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_mulsf3.o)
- .debug_frame   0x0000064c       0xac c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_addsubdf3.o)
- .debug_frame   0x000006f8       0x50 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_muldivdf3.o)
- .debug_frame   0x00000748       0xc4 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_cmpdf2.o)
- .debug_frame   0x0000080c       0x24 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_fixdfsi.o)
- .debug_frame   0x00000830       0x24 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_truncdfsf2.o)
- .debug_frame   0x00000854       0x4c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_addsubsf3.o)
- .debug_frame   0x000008a0       0xc8 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_cmpsf2.o)
- .debug_frame   0x00000968       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-errno.o)
- .debug_frame   0x00000988       0x2c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-init.o)
- .debug_frame   0x000009b4       0x30 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-malloc.o)
- .debug_frame   0x000009e4       0x28 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memcpy-stub.o)
- .debug_frame   0x00000a0c       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memset.o)
- .debug_frame   0x00000a2c       0x38 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-freer.o)
- .debug_frame   0x00000a64       0x30 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-mallocr.o)
- .debug_frame   0x00000a94       0x44 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-rand.o)
- .debug_frame   0x00000ad8       0x2c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-sbrkr.o)
- .debug_frame   0x00000b04       0x40 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-assert.o)
- .debug_frame   0x00000b44       0x64 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fprintf.o)
- .debug_frame   0x00000ba8       0x30 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mlock.o)
- .debug_frame   0x00000bd8       0xac c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf.o)
- .debug_frame   0x00000c84       0x60 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
- .debug_frame   0x00000ce4       0x5c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-reent.o)
- .debug_frame   0x00000d40       0x40 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-wbuf.o)
- .debug_frame   0x00000d80       0x2c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-wsetup.o)
- .debug_frame   0x00000dac       0x28 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-abort.o)
- .debug_frame   0x00000dd4       0x5c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fflush.o)
- .debug_frame   0x00000e30      0x14c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-findfp.o)
- .debug_frame   0x00000f7c       0x54 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fwalk.o)
- .debug_frame   0x00000fd0       0xb0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lock.o)
- .debug_frame   0x00001080       0x58 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-makebuf.o)
- .debug_frame   0x000010d8       0xcc c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-signal.o)
- .debug_frame   0x000011a4       0x3c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-signalr.o)
- .debug_frame   0x000011e0       0x88 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-stdio.o)
- .debug_frame   0x00001268       0x2c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-writer.o)
- .debug_frame   0x00001294       0x2c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-closer.o)
- .debug_frame   0x000012c0       0x2c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fstatr.o)
- .debug_frame   0x000012ec       0x2c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-isattyr.o)
- .debug_frame   0x00001318       0x2c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lseekr.o)
- .debug_frame   0x00001344       0x2c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-readr.o)
- .debug_frame   0x00001370       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(close.o)
- .debug_frame   0x00001390       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(fstat.o)
- .debug_frame   0x000013b0       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(getpid.o)
- .debug_frame   0x000013d0       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(isatty.o)
- .debug_frame   0x000013f0       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(kill.o)
- .debug_frame   0x00001410       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(lseek.o)
- .debug_frame   0x00001430       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(read.o)
- .debug_frame   0x00001450       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(write.o)
- .debug_frame   0x00001470       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(_exit.o)
+ .debug_frame   0x0000004c      0x158 objdir/network.o
+ .debug_frame   0x000001a4      0x154 objdir/simpleserial.o
+ .debug_frame   0x000002f8       0xec objdir/stm32f3_hal.o
+ .debug_frame   0x000003e4      0x1d4 objdir/stm32f3_hal_lowlevel.o
+ .debug_frame   0x000005b8       0x28 objdir/stm32f3_sysmem.o
+ .debug_frame   0x000005e0       0x30 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-w_exp.o)
+ .debug_frame   0x00000610       0x58 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-e_exp.o)
+ .debug_frame   0x00000668       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-s_finite.o)
+ .debug_frame   0x00000688       0x24 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_mulsf3.o)
+ .debug_frame   0x000006ac       0xac c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x00000758       0x50 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_muldivdf3.o)
+ .debug_frame   0x000007a8       0xc4 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_cmpdf2.o)
+ .debug_frame   0x0000086c       0x24 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_fixdfsi.o)
+ .debug_frame   0x00000890       0x24 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_truncdfsf2.o)
+ .debug_frame   0x000008b4       0x4c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_addsubsf3.o)
+ .debug_frame   0x00000900       0xc8 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_cmpsf2.o)
+ .debug_frame   0x000009c8       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-errno.o)
+ .debug_frame   0x000009e8       0x2c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-init.o)
+ .debug_frame   0x00000a14       0x30 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-malloc.o)
+ .debug_frame   0x00000a44       0x28 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x00000a6c       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memset.o)
+ .debug_frame   0x00000a8c       0x38 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x00000ac4       0x30 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x00000af4       0x44 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-rand.o)
+ .debug_frame   0x00000b38       0x2c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x00000b64       0x2c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-time.o)
+ .debug_frame   0x00000b90       0x40 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-assert.o)
+ .debug_frame   0x00000bd0       0x64 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fprintf.o)
+ .debug_frame   0x00000c34       0x2c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-gettimeofdayr.o)
+ .debug_frame   0x00000c60       0x30 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mlock.o)
+ .debug_frame   0x00000c90       0xac c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf.o)
+ .debug_frame   0x00000d3c       0x60 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_frame   0x00000d9c       0x5c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-reent.o)
+ .debug_frame   0x00000df8       0x40 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-wbuf.o)
+ .debug_frame   0x00000e38       0x2c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-wsetup.o)
+ .debug_frame   0x00000e64       0x28 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-abort.o)
+ .debug_frame   0x00000e8c       0x5c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fflush.o)
+ .debug_frame   0x00000ee8      0x14c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-findfp.o)
+ .debug_frame   0x00001034       0x54 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fwalk.o)
+ .debug_frame   0x00001088       0xb0 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lock.o)
+ .debug_frame   0x00001138       0x58 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-makebuf.o)
+ .debug_frame   0x00001190       0xcc c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-signal.o)
+ .debug_frame   0x0000125c       0x3c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-signalr.o)
+ .debug_frame   0x00001298       0x88 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-stdio.o)
+ .debug_frame   0x00001320       0x2c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-writer.o)
+ .debug_frame   0x0000134c       0x2c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-closer.o)
+ .debug_frame   0x00001378       0x2c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fstatr.o)
+ .debug_frame   0x000013a4       0x2c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-isattyr.o)
+ .debug_frame   0x000013d0       0x2c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lseekr.o)
+ .debug_frame   0x000013fc       0x2c c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-readr.o)
+ .debug_frame   0x00001428       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(close.o)
+ .debug_frame   0x00001448       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(fstat.o)
+ .debug_frame   0x00001468       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(getpid.o)
+ .debug_frame   0x00001488       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(gettod.o)
+ .debug_frame   0x000014a8       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(isatty.o)
+ .debug_frame   0x000014c8       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(kill.o)
+ .debug_frame   0x000014e8       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(lseek.o)
+ .debug_frame   0x00001508       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(read.o)
+ .debug_frame   0x00001528       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(write.o)
+ .debug_frame   0x00001548       0x20 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(_exit.o)
 
-.stab           0x00000000      0x204
+.stab           0x00000000      0x21c
  .stab          0x00000000      0x144 objdir/stm32f3_startup.o
  .stab          0x00000144       0x18 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(close.o)
                                  0x24 (size before relaxing)
@@ -1330,19 +1373,21 @@ LOAD c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-e
                                  0x24 (size before relaxing)
  .stab          0x00000174       0x18 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(getpid.o)
                                  0x24 (size before relaxing)
- .stab          0x0000018c       0x18 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(isatty.o)
+ .stab          0x0000018c       0x18 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(gettod.o)
                                  0x24 (size before relaxing)
- .stab          0x000001a4       0x18 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(kill.o)
+ .stab          0x000001a4       0x18 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(isatty.o)
                                  0x24 (size before relaxing)
- .stab          0x000001bc       0x18 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(lseek.o)
+ .stab          0x000001bc       0x18 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(kill.o)
                                  0x24 (size before relaxing)
- .stab          0x000001d4       0x18 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(read.o)
+ .stab          0x000001d4       0x18 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(lseek.o)
                                  0x24 (size before relaxing)
- .stab          0x000001ec       0x18 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(write.o)
+ .stab          0x000001ec       0x18 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(read.o)
+                                 0x24 (size before relaxing)
+ .stab          0x00000204       0x18 c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(write.o)
                                  0x24 (size before relaxing)
 
-.stabstr        0x00000000      0x200
- .stabstr       0x00000000      0x200 objdir/stm32f3_startup.o
+.stabstr        0x00000000      0x244
+ .stabstr       0x00000000      0x244 objdir/stm32f3_startup.o
 
 Cross Reference Table
 
@@ -1635,6 +1680,10 @@ _getpid                                           c:/users/leonard/chipwh~1/cw/h
                                                   c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-signalr.o)
 _getpid_r                                         c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-signalr.o)
                                                   c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-signal.o)
+_gettimeofday                                     c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(gettod.o)
+                                                  c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-gettimeofdayr.o)
+_gettimeofday_r                                   c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-gettimeofdayr.o)
+                                                  c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-time.o)
 _global_impure_ptr                                c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-impure.o)
                                                   c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-findfp.o)
                                                   c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fflush.o)
@@ -1649,6 +1698,7 @@ _impure_ptr                                       c:/users/leonard/chipwh~1/cw/h
                                                   c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf.o)
                                                   c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fprintf.o)
                                                   c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-assert.o)
+                                                  c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-time.o)
                                                   c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-rand.o)
                                                   c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-malloc.o)
                                                   c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-errno.o)
@@ -1726,6 +1776,7 @@ errno                                             c:/users/leonard/chipwh~1/cw/h
                                                   c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(lseek.o)
                                                   c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(kill.o)
                                                   c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(isatty.o)
+                                                  c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(gettod.o)
                                                   c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(getpid.o)
                                                   c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(fstat.o)
                                                   c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a(close.o)
@@ -1736,6 +1787,7 @@ errno                                             c:/users/leonard/chipwh~1/cw/h
                                                   c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-closer.o)
                                                   c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-writer.o)
                                                   c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-signalr.o)
+                                                  c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-gettimeofdayr.o)
                                                   c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-sbrkr.o)
 exit                                              c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-exit.o)
                                                   c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
@@ -1747,11 +1799,13 @@ finite                                            c:/users/leonard/chipwh~1/cw/h
 fiprintf                                          c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fprintf.o)
                                                   c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-assert.o)
 forward                                           objdir/network.o
-                                                  objdir/main.o
 forward_layer                                     objdir/network.o
+forward_shuffled                                  objdir/network.o
+                                                  objdir/main.o
 fprintf                                           c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-fprintf.o)
 free                                              c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-malloc.o)
 g_pfnVectors                                      objdir/stm32f3_startup.o
+get_random_indices                                objdir/network.o
 getch                                             objdir/stm32f3_hal.o
                                                   objdir/simpleserial.o
 hal_sys_tick                                      objdir/stm32f3_hal_lowlevel.o
@@ -1787,6 +1841,7 @@ raise                                             c:/users/leonard/chipwh~1/cw/h
                                                   c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-abort.o)
 rand                                              c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-rand.o)
                                                   objdir/network.o
+shuffleArray                                      objdir/network.o
 signal                                            c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-signal.o)
 simpleserial_addcmd                               objdir/simpleserial.o
                                                   objdir/main.o
@@ -1798,10 +1853,14 @@ simpleserial_put                                  objdir/simpleserial.o
                                                   objdir/main.o
 software_init_hook                                c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
 srand                                             c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-rand.o)
+                                                  objdir/network.o
 ss_crc                                            objdir/simpleserial.o
 ss_get_commands                                   objdir/simpleserial.o
 ss_puts                                           objdir/simpleserial.o
 stuff_data                                        objdir/simpleserial.o
+swap                                              objdir/network.o
+time                                              c:/users/leonard/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-time.o)
+                                                  objdir/network.o
 trigger_high                                      objdir/stm32f3_hal.o
                                                   objdir/main.o
 trigger_low                                       objdir/stm32f3_hal.o

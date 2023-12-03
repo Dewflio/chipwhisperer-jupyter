@@ -30,4 +30,13 @@ network construct_network(int num_outputs, int num_layers, int *num_neurons);
 
 void forward_layer(network net, int layer_idx);
 
+void forward_shuffled(network net);
+
 void forward(network net);
+
+//RANDOM SHUFFLING
+void swap(int *a, int *b);
+
+void shuffleArray(int arr[], int size);
+
+int* get_random_indices(int size);

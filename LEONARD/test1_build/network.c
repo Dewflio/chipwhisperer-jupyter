@@ -2,6 +2,29 @@
 #include <stdint.h>
 #include <math.h>
 
+void swap(int *a, int *b){
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+void shuffleArray(int arr[], int size){
+    srand(time(NULL));
+    for (int i = size - 1; i > 0; i--) {
+        int j = rand() % (i + 1);
+        swap(&arr[i], &arr[j]);
+    }
+}
+
+int* get_random_indices(int size){
+    int *arr = malloc(size * sizeof(int));
+    for (int i=0; i<size; i++){
+        arr[i] = i;
+    }
+    shuffleArray(arr, size);
+    return arr;
+}
+
 neuron create_neuron(int num_out_weights){
     neuron new_neuron;
     new_neuron.bias = 0.0;
@@ -55,6 +78,57 @@ void forward_layer(network net, int layer_idx){
     
 }
 
+void forward_shuffled(network net) {
+    int i, j, k, nidx;
+    int *rand_n_idx, *rand_w_idx;
+    uint8_t result, scmd = 16;
+    // for each layer
+    for (i=1; i<net.num_layers; i++){
+        
+        rand_n_idx = get_random_indices(net.layers[i].num_neurons);
+        // for each neuron in this layer
+        for (j=0; j<net.layers[i].num_neurons; j++){
+            nidx = rand_n_idx[j];  
+            net.layers[i].neurons[nidx].z = net.layers[i].neurons[nidx].bias;
+
+
+            rand_w_idx = get_random_indices(net.layers[i - 1].num_neurons);
+            // for all neurons on the previous layer
+            for (k=0; k<net.layers[i - 1].num_neurons; k++){
+                
+                net.layers[i].neurons[nidx].z = net.layers[i].neurons[nidx].z +
+                ((net.layers[i-1].neurons[rand_w_idx[k]].weights[nidx]) * (net.layers[i-1].neurons[rand_w_idx[k]].a));
+                // We are looking for THIS MULTIPLICATION
+            }
+            //get a values
+            net.layers[i].neurons[nidx].a = net.layers[i].neurons[nidx].z;
+            //apply relu
+            if(i < net.num_layers-1){
+                if((net.layers[i].neurons[nidx].z) < 0)
+                {
+                    net.layers[i].neurons[nidx].a = 0;
+                }
+
+                else
+                {
+                    net.layers[i].neurons[nidx].a = net.layers[i].neurons[nidx].z;
+                }
+            }
+            //apply sigmoid to the last layer
+            else{
+                net.layers[i].neurons[nidx].a = 1/(1+exp(-net.layers[i].neurons[nidx].z));
+            }
+        }
+
+        for (volatile int test = 0; test<40; test++) {
+            result = scmd *scmd;
+            result = scmd *scmd;
+            result = scmd *scmd;
+            result = scmd *scmd;
+        }
+    }
+}
+
 void forward(network net){
     int i, j, k;
     uint8_t result, scmd = 16;
@@ -68,7 +142,7 @@ void forward(network net){
             // for all neurons on the previous layer
             for (k=0; k<net.layers[i - 1].num_neurons; k++){
                 net.layers[i].neurons[j].z = net.layers[i].neurons[j].z +
-                ((net.layers[i-1].neurons[k].weights[j]) * (net.layers[i-1].neurons[j].a));
+                ((net.layers[i-1].neurons[k].weights[j]) * (net.layers[i-1].neurons[k].a));
                 // We are looking for THIS MULTIPLICATION
             }
             //get a values
