@@ -92,7 +92,7 @@ connected:
   - id: 5
     scope: OPENADC
     target: CW308_SAM4S
-    serial number: 50203120314136503030393138303036
+    serial number: 50203120374a38503230343136303038
     firmware: TINYAES128C
     tutorial type: HARDWARE
     enabled: True
@@ -101,19 +101,19 @@ connected:
     short name: CWHUSKY
     kwargs: 
         LONG_TEST: "No"
-  - id: 6
-    scope: OPENADC
-    target: CW305
-    serial number: 44203120394d36433230342038303039
-    target serial number: 44203120314854373030353234303039 
-    firmware: NONE
-    tutorial type: HARDWARE
-    enabled: False
-    MPSSE: False
-    name: ChipWhisperer-Lite CW305
-    short name: CW305
-    kwargs:
-        FPGA_ID: "35t"
+  # - id: 6
+  #   scope: OPENADC
+  #   target: CW305
+  #   serial number: 44203120394d36433230342038303039
+  #   target serial number: 44203120314854373030353234303039 
+  #   firmware: NONE
+  #   tutorial type: HARDWARE
+  #   enabled: False
+  #   MPSSE: False
+  #   name: ChipWhisperer-Lite CW305
+  #   short name: CW305
+  #   kwargs:
+  #       FPGA_ID: "35t"
 
 # tests/Test CDC.ipynb:
 #   configurations:
@@ -128,7 +128,7 @@ tutorials:
   courses/sca101/SOLN_Lab 2_1B - Power Analysis for Password Bypass.ipynb:
     configurations:
       - ssver: SS_VER_2_1
-        ids: [0, 1, 2, 3, 5]
+        ids: [0, 1, 2, 3]
   courses/sca101/SOLN_Lab 3_2 - Recovering Data from a Single Bit.ipynb:
     configurations:
       - ssver: SS_VER_2_1
@@ -140,11 +140,11 @@ tutorials:
   courses/fault101/SOLN_Fault 1_1 - Introduction to Clock Glitching.ipynb:
     configurations:
       - ssver: SS_VER_2_1
-        ids: [0, 2, 4]
+        ids: [0, 2, 4, 5]
   courses/fault101/SOLN_Fault 2_1 - Introduction to Voltage Glitching.ipynb:
     configurations:
       - ssver: SS_VER_2_1
-        ids: [0]
+        ids: [0, 5]
   tests/Test Pro.ipynb:
      configurations:
       - ssver: SS_VER_2_1
@@ -157,10 +157,10 @@ tutorials:
     configurations:
       - ssver: SS_VER_2_1
         ids: [3]
-  demos/PA_HW_CW305_1-Attacking_AES_on_an_FPGA.ipynb:
-    configurations:
-      - ssver: SS_VER_2_1
-        ids: [6]
+  # demos/PA_HW_CW305_1-Attacking_AES_on_an_FPGA.ipynb:
+  #   configurations:
+  #     - ssver: SS_VER_2_1
+  #       ids: [6]
       
 # courses/fault101/SOLN_Fault 2_2B - Voltage Glitching with CWNano to Bypass Password.ipynb:
 #   configurations:
