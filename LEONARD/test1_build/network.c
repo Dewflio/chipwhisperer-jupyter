@@ -78,10 +78,153 @@ void forward_layer(network net, int layer_idx){
     
 }
 
+int ****generate_random_indices(network net) {
+    int i, j, k;
+
+    int **rand_n_indices = malloc((net.num_layers - 1) * sizeof(int*));
+    int ***rand_ws_indices  = malloc((net.num_layers - 1) * sizeof(int**));
+    
+    for (i=1; i<net.num_layers; i++){
+        // for each neuron in this layer
+        int *rand_n_idx = get_random_indices(net.layers[i].num_neurons);
+        rand_n_indices[i - 1] = rand_n_idx;
+
+
+        int **rand_w_indices = malloc((net.layers[i].num_neurons) * sizeof(int*));
+        // for each neuron in this layer
+        for (j=0; j<net.layers[i].num_neurons; j++){
+            int *rand_w_idx = get_random_indices(net.layers[i - 1].num_neurons);
+            rand_w_indices[j] = rand_w_idx;
+        }
+        rand_ws_indices[i - 1] = rand_w_indices;
+    }
+
+    int ***rand_n_indices_ptr = &rand_n_indices;
+
+    int ****returned_ptr = malloc(2 * sizeof(int***));
+    returned_ptr[0] = rand_n_indices_ptr;
+    returned_ptr[1] = rand_ws_indices;
+
+    return returned_ptr;
+}
+
+void forward_shuffled_without_overhead(network net, int**** random_indices) {
+    int i, j, k, nidx;
+    int *rand_n_idx, *rand_w_idx;
+
+    int **rand_n_indices = *random_indices[0];
+    int ***rand_ws_indices = random_indices[1];
+
+    uint8_t result, scmd = 16;
+    // for each layer
+    for (i=1; i<net.num_layers; i++){
+        
+        rand_n_idx = rand_n_indices[i - 1];
+        // for each neuron in this layer
+        for (j=0; j<net.layers[i].num_neurons; j++){
+            nidx = rand_n_idx[j];  
+            net.layers[i].neurons[nidx].z = net.layers[i].neurons[nidx].bias;
+
+
+            rand_w_idx = rand_ws_indices[i - 1][j];
+            // for all neurons on the previous layer
+            for (k=0; k<net.layers[i - 1].num_neurons; k++){
+                
+                net.layers[i].neurons[nidx].z = net.layers[i].neurons[nidx].z +
+                ((net.layers[i-1].neurons[rand_w_idx[k]].weights[nidx]) * (net.layers[i-1].neurons[rand_w_idx[k]].a));
+                // We are looking for THIS MULTIPLICATION
+            }
+            //get a values
+            net.layers[i].neurons[nidx].a = net.layers[i].neurons[nidx].z;
+            //apply relu
+            if(i < net.num_layers-1){
+                if((net.layers[i].neurons[nidx].z) < 0)
+                {
+                    net.layers[i].neurons[nidx].a = 0;
+                }
+
+                else
+                {
+                    net.layers[i].neurons[nidx].a = net.layers[i].neurons[nidx].z;
+                }
+            }
+            //apply sigmoid to the last layer
+            else{
+                net.layers[i].neurons[nidx].a = 1/(1+exp(-net.layers[i].neurons[nidx].z));
+            }
+        }
+
+        for (volatile int test = 0; test<1; test++) {
+            result = scmd *scmd;
+            //result = scmd *scmd;
+            //result = scmd *scmd;
+            //result = scmd *scmd;
+        }
+    }
+}
+
+void forward_shuffled_without_overhead_activations_at_end(network net, int**** random_indices) {
+    int i, j, k, nidx;
+    int *rand_n_idx, *rand_w_idx;
+
+    int **rand_n_indices = *random_indices[0];
+    int ***rand_ws_indices = random_indices[1];
+
+    uint8_t result, scmd = 16;
+    // for each layer
+    for (volatile i=1; i<net.num_layers; i++){
+        
+        rand_n_idx = rand_n_indices[i - 1];
+        // for each neuron in this layer
+        for (j=0; j<net.layers[i].num_neurons; j++){
+            nidx = rand_n_idx[j];  
+            net.layers[i].neurons[nidx].z = net.layers[i].neurons[nidx].bias;
+
+
+            rand_w_idx = rand_ws_indices[i - 1][j];
+            // for all neurons on the previous layer
+            for (k=0; k<net.layers[i - 1].num_neurons; k++){
+                
+                net.layers[i].neurons[nidx].z = net.layers[i].neurons[nidx].z +
+                ((net.layers[i-1].neurons[rand_w_idx[k]].weights[nidx]) * (net.layers[i-1].neurons[rand_w_idx[k]].a));
+                // We are looking for THIS MULTIPLICATION
+            }
+            //get a values
+            net.layers[i].neurons[nidx].a = net.layers[i].neurons[nidx].z;
+        }
+
+        for (j=0; j<net.layers[i].num_neurons; j++) {
+            //apply relu
+            if(i < net.num_layers-1){
+                if((net.layers[i].neurons[nidx].z) < 0)
+                {
+                    net.layers[i].neurons[nidx].a = 0;
+                }
+
+                else
+                {
+                    net.layers[i].neurons[nidx].a = net.layers[i].neurons[nidx].z;
+                }
+            }
+            //apply sigmoid to the last layer
+            else{
+                net.layers[i].neurons[nidx].a = 1/(1+exp(-net.layers[i].neurons[nidx].z));
+            }
+        }
+
+        //for (volatile int test = 0; test<1; test++) {
+            //result = scmd *scmd;
+            //result = scmd *scmd;
+            //result = scmd *scmd;
+            //result = scmd *scmd;
+        //}
+    }
+}
+
 void forward_shuffled(network net) {
     int i, j, k, nidx;
     int *rand_n_idx, *rand_w_idx;
-    uint8_t result, scmd = 16;
+    //uint8_t result, scmd = 16;
     // for each layer
     for (i=1; i<net.num_layers; i++){
         
@@ -120,18 +263,18 @@ void forward_shuffled(network net) {
             }
         }
 
-        for (volatile int test = 0; test<40; test++) {
-            result = scmd *scmd;
-            result = scmd *scmd;
-            result = scmd *scmd;
-            result = scmd *scmd;
-        }
+        //for (volatile int test = 0; test<40; test++) {
+        //    result = scmd *scmd;
+        //    result = scmd *scmd;
+        //    result = scmd *scmd;
+        //    result = scmd *scmd;
+        //}
     }
 }
 
 void forward(network net){
     int i, j, k;
-    uint8_t result, scmd = 16;
+    //uint8_t result, scmd = 16;
     // for each layer
     for (i=1; i<net.num_layers; i++){
         
@@ -165,11 +308,11 @@ void forward(network net){
             }
         }
 
-        for (volatile int test = 0; test<40; test++) {
-            result = scmd *scmd;
-            result = scmd *scmd;
-            result = scmd *scmd;
-            result = scmd *scmd;
-        }
+        //for (volatile int test = 0; test<40; test++) {
+        //    result = scmd *scmd;
+        //    result = scmd *scmd;
+        //    result = scmd *scmd;
+        //    result = scmd *scmd;
+        //}
     }
 }

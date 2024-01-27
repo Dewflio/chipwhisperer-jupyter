@@ -24,10 +24,15 @@ uint8_t handle(uint8_t cmd, uint8_t scmd, uint8_t len, uint8_t *buf)
   int arr[4] = {7,5,4,2};
   network net = construct_network(5, 4, arr);
 
+  int ****random_indices = generate_random_indices(net);
+
   // Start measurement.
   trigger_high();
 
-  forward_shuffled(net);
+  //forward(net);
+  //forward_shuffled(net);
+  //forward_shuffled_without_overhead(net, random_indices);
+  forward_shuffled_without_overhead_activations_at_end(net, random_indices);
 
   // Stop measurement.
   trigger_low();

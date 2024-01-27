@@ -1,3 +1,6 @@
+*.eep
+*.pdb
+
 *.pyc
 *.autopilot/*
 *.s#*

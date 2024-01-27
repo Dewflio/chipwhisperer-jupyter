@@ -32,6 +32,12 @@ void forward_layer(network net, int layer_idx);
 
 void forward_shuffled(network net);
 
+void forward_shuffled_without_overhead(network net, int**** random_indices);
+
+void forward_shuffled_without_overhead_activations_at_end(network net, int**** random_indices);
+
+int ****generate_random_indices(network net);
+
 void forward(network net);
 
 //RANDOM SHUFFLING
@@ -40,3 +46,4 @@ void swap(int *a, int *b);
 void shuffleArray(int arr[], int size);
 
 int* get_random_indices(int size);
+
