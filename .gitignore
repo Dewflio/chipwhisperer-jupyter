@@ -1,4 +1,9 @@
 *.eep
+*.elf
+*.hex
+*.lss
+*.map
+*.sym
 *.pdb
 
 *.pyc
