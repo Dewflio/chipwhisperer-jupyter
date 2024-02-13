@@ -117,18 +117,18 @@ void forward_shuffled_without_overhead(network net, int**** random_indices) {
 
     uint8_t result, scmd = 16;
     // for each layer
-    for (i=1; i<net.num_layers; i++){
+    for (volatile i=1; i<net.num_layers; i++){
         
         rand_n_idx = rand_n_indices[i - 1];
         // for each neuron in this layer
-        for (j=0; j<net.layers[i].num_neurons; j++){
+        for (volatile j=0; j<net.layers[i].num_neurons; j++){
             nidx = rand_n_idx[j];  
             net.layers[i].neurons[nidx].z = net.layers[i].neurons[nidx].bias;
 
 
             rand_w_idx = rand_ws_indices[i - 1][j];
             // for all neurons on the previous layer
-            for (k=0; k<net.layers[i - 1].num_neurons; k++){
+            for (volatile k=0; k<net.layers[i - 1].num_neurons; k++){
                 
                 net.layers[i].neurons[nidx].z = net.layers[i].neurons[nidx].z +
                 ((net.layers[i-1].neurons[rand_w_idx[k]].weights[nidx]) * (net.layers[i-1].neurons[rand_w_idx[k]].a));
@@ -154,12 +154,12 @@ void forward_shuffled_without_overhead(network net, int**** random_indices) {
             }
         }
 
-        for (volatile int test = 0; test<1; test++) {
-            result = scmd *scmd;
-            //result = scmd *scmd;
-            //result = scmd *scmd;
-            //result = scmd *scmd;
-        }
+        //for (volatile int test = 0; test<1; test++) {
+        //    result = scmd *scmd;
+        //    result = scmd *scmd;
+        //    result = scmd *scmd;
+        //    result = scmd *scmd;
+        //}
     }
 }
 
@@ -176,14 +176,14 @@ void forward_shuffled_without_overhead_activations_at_end(network net, int**** r
         
         rand_n_idx = rand_n_indices[i - 1];
         // for each neuron in this layer
-        for (j=0; j<net.layers[i].num_neurons; j++){
+        for (volatile j=0; j<net.layers[i].num_neurons; j++){
             nidx = rand_n_idx[j];  
             net.layers[i].neurons[nidx].z = net.layers[i].neurons[nidx].bias;
 
 
             rand_w_idx = rand_ws_indices[i - 1][j];
             // for all neurons on the previous layer
-            for (k=0; k<net.layers[i - 1].num_neurons; k++){
+            for (volatile k=0; k<net.layers[i - 1].num_neurons; k++){
                 
                 net.layers[i].neurons[nidx].z = net.layers[i].neurons[nidx].z +
                 ((net.layers[i-1].neurons[rand_w_idx[k]].weights[nidx]) * (net.layers[i-1].neurons[rand_w_idx[k]].a));
@@ -193,7 +193,7 @@ void forward_shuffled_without_overhead_activations_at_end(network net, int**** r
             net.layers[i].neurons[nidx].a = net.layers[i].neurons[nidx].z;
         }
 
-        for (j=0; j<net.layers[i].num_neurons; j++) {
+        for (volatile j=0; j<net.layers[i].num_neurons; j++) {
             //apply relu
             if(i < net.num_layers-1){
                 if((net.layers[i].neurons[nidx].z) < 0)
