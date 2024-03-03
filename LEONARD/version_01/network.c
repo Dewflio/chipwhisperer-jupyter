@@ -108,7 +108,7 @@ int ****generate_random_indices(network net) {
     return returned_ptr;
 }
 
-void forward_shuffled_without_overhead(network net, int**** random_indices) {
+void forward_shuffled_without_overhead(network net, int**** random_indices, int dummy_operations) {
     int i, j, k, nidx;
     int *rand_n_idx, *rand_w_idx;
 
@@ -154,16 +154,18 @@ void forward_shuffled_without_overhead(network net, int**** random_indices) {
             }
         }
 
-        //for (volatile int test = 0; test<1; test++) {
-        //    result = scmd *scmd;
-        //    result = scmd *scmd;
-        //    result = scmd *scmd;
-        //    result = scmd *scmd;
-        //}
+        //OPTIONAL DUMMY OPERATIONS
+        if (dummy_operations > 0){
+            for (volatile int dummy_i = 0; dummy_i<10; dummy_i++) {
+                result = scmd *scmd;
+                result = scmd *scmd;
+                result = scmd *scmd;
+            }
+        }   
     }
 }
 
-void forward_shuffled_without_overhead_activations_at_end(network net, int**** random_indices) {
+void forward_shuffled_without_overhead_activations_at_end(network net, int**** random_indices, int dummy_operations) {
     int i, j, k, nidx;
     int *rand_n_idx, *rand_w_idx;
 
@@ -191,6 +193,13 @@ void forward_shuffled_without_overhead_activations_at_end(network net, int**** r
             }
             //get a values
             net.layers[i].neurons[nidx].a = net.layers[i].neurons[nidx].z;
+            if (dummy_operations > 1){
+            for (volatile int dummy_i = 0; dummy_i<50; dummy_i++) {
+                result = scmd *scmd;
+                result = scmd *scmd;
+                result = scmd *scmd;
+            }
+        } 
         }
 
         for (volatile j=0; j<net.layers[i].num_neurons; j++) {
@@ -211,20 +220,21 @@ void forward_shuffled_without_overhead_activations_at_end(network net, int**** r
                 net.layers[i].neurons[nidx].a = 1/(1+exp(-net.layers[i].neurons[nidx].z));
             }
         }
-
-        //for (volatile int test = 0; test<1; test++) {
-            //result = scmd *scmd;
-            //result = scmd *scmd;
-            //result = scmd *scmd;
-            //result = scmd *scmd;
-        //}
+        //OPTIONAL DUMMY OPERATIONS
+        if (dummy_operations > 0){
+            for (volatile int dummy_i = 0; dummy_i<50; dummy_i++) {
+                result = scmd *scmd;
+                result = scmd *scmd;
+                result = scmd *scmd;
+            }
+        } 
     }
 }
 
-void forward_shuffled(network net) {
+void forward_shuffled(network net, int dummy_operations) {
     int i, j, k, nidx;
     int *rand_n_idx, *rand_w_idx;
-    //uint8_t result, scmd = 16;
+    uint8_t result, scmd = 16;
     // for each layer
     for (i=1; i<net.num_layers; i++){
         
@@ -262,19 +272,20 @@ void forward_shuffled(network net) {
                 net.layers[i].neurons[nidx].a = 1/(1+exp(-net.layers[i].neurons[nidx].z));
             }
         }
-
-        //for (volatile int test = 0; test<40; test++) {
-        //    result = scmd *scmd;
-        //    result = scmd *scmd;
-        //    result = scmd *scmd;
-        //    result = scmd *scmd;
-        //}
+        //OPTIONAL DUMMY OPERATIONS
+        if (dummy_operations > 0){
+            for (volatile int dummy_i = 0; dummy_i<10; dummy_i++) {
+                result = scmd *scmd;
+                result = scmd *scmd;
+                result = scmd *scmd;
+            }
+        }
     }
 }
 
-void forward(network net){
+void forward(network net, int dummy_operations){
     int i, j, k;
-    //uint8_t result, scmd = 16;
+    uint8_t result, scmd = 16;
     // for each layer
     for (i=1; i<net.num_layers; i++){
         
@@ -307,12 +318,13 @@ void forward(network net){
                 net.layers[i].neurons[j].a = 1/(1+exp(-net.layers[i].neurons[j].z));
             }
         }
-
-        //for (volatile int test = 0; test<40; test++) {
-        //    result = scmd *scmd;
-        //    result = scmd *scmd;
-        //    result = scmd *scmd;
-        //    result = scmd *scmd;
-        //}
+        //OPTIONAL DUMMY OPERATIONS
+        if (dummy_operations > 0){
+            for (volatile int dummy_i = 0; dummy_i<10; dummy_i++) {
+                result = scmd *scmd;
+                result = scmd *scmd;
+                result = scmd *scmd;
+            }
+        }
     }
 }

@@ -31,8 +31,8 @@ uint8_t handle(uint8_t cmd, uint8_t scmd, uint8_t len, uint8_t *buf)
 
   //forward(net);
   //forward_shuffled(net);
-  //forward_shuffled_without_overhead(net, random_indices);
-  forward_shuffled_without_overhead_activations_at_end(net, random_indices);
+  //forward_shuffled_without_overhead(net, random_indices, 0);
+  forward_shuffled_without_overhead_activations_at_end(net, random_indices, 2);
 
   // Stop measurement.
   trigger_low();
