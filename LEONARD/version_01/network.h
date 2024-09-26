@@ -30,9 +30,6 @@ typedef struct random_indices_struct {
     weight_indices *w_indices;
 } random_indices;
 
-
-
-
 neuron create_neuron(int num_out_weights);
 
 layer create_layer(int num_neurons);
@@ -47,12 +44,14 @@ void forward(network net, int dummy_operations);
 
 void forward_shuffled(network net, int dummy_operations);
 
-void forward_shuffled_without_overhead(network net, int**** random_indices, int dummy_operations);
+// No Overhead
+void forward_shuffled_NO(network net, int**** random_indices, int dummy_operations);
 
-void forward_shuffled_without_overhead_activations_at_end(network net, int**** random_indices, int dummy_operations);
+// No Overhead, Activations At the End, Random Dummy Operations
+void forward_shuffled_NO_AAE(network net, int**** random_indices, int dummy_operations);
 
-int ****generate_random_indices(network net);
-
+// No Overhead, Activations At the End, Random Dummy Operations
+void forward_shuffled_NO_AAE_RDO(network net, int**** random_indices, int ***random_dummy_operations);
 
 
 //RANDOM SHUFFLING
@@ -60,5 +59,15 @@ void swap(int *a, int *b);
 
 void shuffleArray(int arr[], int size);
 
+int ****generate_random_indices(network net);
+
 int* get_random_indices(int size);
+
+//RANDOM DUMMY OPERATIONS
+
+int ***generate_random_dummy_operations(network net);
+
+int* get_random_binary_indices(int size);
+
+
 

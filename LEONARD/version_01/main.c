@@ -7,7 +7,10 @@
 
 #include <stdint.h>
 #include <stdlib.h>
+#include <string.h>
 #include "network.h"
+#include "hal/hal.h"
+#include "hal/stm32f3/stm32f3_hal.h"
 
 #define SS_VER SS_VER_2_1
 
@@ -19,30 +22,43 @@
 /// differences between different scmd values.
 uint8_t handle(uint8_t cmd, uint8_t scmd, uint8_t len, uint8_t *buf)
 {
-  volatile uint8_t result = 0;
-
   int arr[4] = {7,5,4,2};
   network net = construct_network(5, 4, arr);
 
-  int ****random_indices = generate_random_indices(net);
+  //Change the input of the first neuron in the first layer to the provided number
+  //convert to float
+  float input_value;
+  uint8_t input_buffer[4] = {buf[0], buf[1], buf[2], buf[3]};
+  memcpy(&input_value, input_buffer, sizeof(float)); 
+  net.layers[0].neurons[0].a = input_value;
 
+  int ****random_indices = generate_random_indices(net);
+  //int ***random_dummy_operations_indices = generate_random_dummy_operations(net);
+  int ***random_dummy_operations_indices = NULL;
   // Start measurement.
   trigger_high();
 
   //forward(net);
   //forward_shuffled(net);
-  //forward_shuffled_without_overhead(net, random_indices, 0);
-  forward_shuffled_without_overhead_activations_at_end(net, random_indices, 2);
+  //forward_shuffled_NO(net, random_indices, 0);
+  //forward_shuffled_NO_AAE(net, random_indices, 2);
+  forward_shuffled_NO_AAE_RDO(net, random_indices, random_dummy_operations_indices);
 
   // Stop measurement.
   trigger_low();
 
+  
 
-  result = scmd*scmd;
-  // For now we can just return the result back to the user.
-  uint8_t buff[1] = { result };
-  simpleserial_put('r', 1, buff);
+  simpleserial_put('r', len, buf);
 
+  return 0;
+}
+
+uint8_t test_handle(uint8_t cmd, uint8_t scmd, uint8_t len, uint8_t *buf)
+{
+  uint8_t *out_buf = buf;
+
+  simpleserial_put('r', len, out_buf);
   return 0;
 }
 
@@ -58,6 +74,7 @@ int main(void) {
 
   // Insert your handlers here.
   simpleserial_addcmd('p', 16, handle);
+  simpleserial_addcmd('x', 16, test_handle);
 
   // What for the capture board to send commands and handle them.
   while (1)

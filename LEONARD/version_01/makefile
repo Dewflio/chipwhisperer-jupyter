@@ -39,6 +39,7 @@ SRC += main.c network.c
 SS_VER=SS_VER_2_1
 PLATFORM=CWLITEARM
 
+
 # -----------------------------------------------------------------------------
 #debugging:
 #	gcc -o debug-target debug-source.c main.c
@@ -56,5 +57,5 @@ $(TARGET): $(OBJ) network.o
 	$(CC) $(LDFLAGS) -o $@ $^ $(LDLIBS)
 
 # Rule to build network.o from network.c
-network.o: network.c network.h
+network.o: network.c network.h 
 	$(CC) $(CFLAGS) -c -o $@ $<
