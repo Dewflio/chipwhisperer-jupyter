@@ -30,6 +30,8 @@ typedef struct random_indices_struct {
     weight_indices *w_indices;
 } random_indices;
 
+void free_network_memory(network *net, int ****rand_indices);
+
 neuron create_neuron(int num_out_weights);
 
 layer create_layer(int num_neurons);

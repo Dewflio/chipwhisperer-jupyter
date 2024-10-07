@@ -46,10 +46,12 @@ uint8_t handle(uint8_t cmd, uint8_t scmd, uint8_t len, uint8_t *buf)
 
   // Stop measurement.
   trigger_low();
-
   
-
+  
   simpleserial_put('r', len, buf);
+
+  //free dynamically allocated memory
+  free_network_memory(&net, random_indices);
 
   return 0;
 }

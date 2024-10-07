@@ -12,6 +12,51 @@ void swap(int *a, int *b){
 * @brief
 * Shuffles the array using the Fisher-Yates shuffle
 */
+void free_network_memory(network *net, int ****rand_indices){
+
+    int nidx = 0;
+    int *rand_n_idx, *rand_w_idx;
+    int **rand_n_indices = *rand_indices[0];
+    int ***rand_ws_indices = rand_indices[1];
+
+    // free the dynamically allocated fields inside rand_indices
+    for (int i=1; i < net->num_layers; i++){
+        rand_n_idx = rand_n_indices[i - 1];
+        for (int j=0; j<net->layers[i].num_neurons; j++){
+            //nidx = rand_n_idx[j];  
+            rand_w_idx = rand_ws_indices[i - 1][j];
+            
+            //free(rand_w_idx);
+            free(rand_ws_indices[i - 1][j]);
+        }
+        //free(rand_n_idx);
+        //free(&rand_n_indices[i - 1]);
+    }
+    //free(*rand_indices[0]);
+    //free(rand_ws_indices);
+    //free(rand_indices);
+
+
+    // free the dynamically allocated fields inside the network struct
+    for (int i=0; i < net->num_layers; i++){
+        
+        for(int j=0; j< net->layers[i].num_neurons; j++){
+            free(net->layers[i].neurons[j].weights);
+            if ((i > 0) && (i < net->num_layers - 1)) {
+                //free(rand_indices[1][i][j]); //individual ws indices
+            }
+        }
+        if (i < net->num_layers - 1) {
+            //free(*rand_indices[0][i]);  //ns
+            //free(rand_indices[1][i]);   //ws
+        }
+        free(net->layers[i].neurons);
+    }
+    free(net->layers);
+    //free(net); net is stack allocated as of right now
+}
+
+
 void shuffleArray(int arr[], int size){
     srand(time(NULL));
     for (int i = size - 1; i > 0; i--) {
