@@ -10,11 +10,9 @@
 #include <string.h>
 #include "network.h"
 
-
-//#ifndef DEBUGGING
 #include "hal/hal.h"
 #include "hal/stm32f3/stm32f3_hal.h"
-//#endif
+
 
 
 #define SS_VER SS_VER_2_1
@@ -28,8 +26,8 @@
 uint8_t handle(uint8_t cmd, uint8_t scmd, uint8_t len, uint8_t *buf)
 {
   int arr[6] = {7,5,4,3, 4, 5};
-  network net = construct_network(5, 6, arr);
-
+  network net = construct_network2(5, 6, arr);
+  
   //Change the input of the first neuron in the first layer to the provided number
   //convert to float
   float input_value;
@@ -37,7 +35,10 @@ uint8_t handle(uint8_t cmd, uint8_t scmd, uint8_t len, uint8_t *buf)
   memcpy(&input_value, input_buffer, sizeof(float)); 
   net.layers[0].neurons[0].a = input_value;
 
-  int ****random_indices = generate_random_indices(net);
+  #ifdef DEBUGGING
+  print_network(net);
+  #endif
+  //int ****random_indices = generate_random_indices(net);
   //int ***random_dummy_operations_indices = generate_random_dummy_operations(net);
   int ***random_dummy_operations_indices = NULL;
   // Start measurement.
@@ -46,20 +47,23 @@ uint8_t handle(uint8_t cmd, uint8_t scmd, uint8_t len, uint8_t *buf)
   //#ifdef DEBUGGING
   //printf("Running foward...\n");
   //#endif
-  forward(net, 0);
+  net = forward2(net);
+  //forward(net);
   //forward_shuffled(net);
-  //forward_shuffled_NO(net, random_indices, 0);
+  //forward_shuffled_NO(net, random_indices);
   //forward_shuffled_NO_AAE(net, random_indices, 2);
   //forward_shuffled_NO_AAE_RDO(net, random_indices, random_dummy_operations_indices);
-
   // Stop measurement.
   trigger_low();
+
+  #ifdef DEBUGGING
+  print_network(net);
+  #endif
   
+  //free dynamically allocated memory
+  free_network(&net);
   
   simpleserial_put('r', len, buf);
-
-  //free dynamically allocated memory
-  free_network_memory(&net, random_indices);
 
   return 0;
 }

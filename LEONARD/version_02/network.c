@@ -8,57 +8,22 @@ void swap(int *a, int *b){
     *b = temp;
 }
 
-/** 
-* @brief
-* Shuffles the array using the Fisher-Yates shuffle
-*/
-void free_network_memory(network *net, int ****rand_indices){
-
-    int nidx = 0;
-    int *rand_n_idx, *rand_w_idx;
-    int ***rand_n_indices_ptr = rand_indices[0];
-    int **rand_n_indices = *rand_n_indices_ptr;
-    int ***rand_ws_indices = rand_indices[1];
-
-    // free the dynamically allocated fields inside rand_indices
-    for (int i=1; i < net->num_layers; i++){
-        //rand_n_idx = rand_n_indices[i - 1];
-        for (int j=0; j < net->layers[i].num_neurons; j++){
-            //nidx = rand_n_idx[j];  
-            rand_w_idx = rand_ws_indices[i - 1][j];
-            
-            //free(rand_w_idx);
-            free(rand_ws_indices[i - 1][j]);
-        }
-        free(rand_ws_indices[i - 1]);
-        printf("Freeing mem...\n"); 
-    }
-    for (int i=1; i< net->num_layers; i++){
-        //free(rand_n_indices[i - 1]);
-    }
-    
-
-
+void free_network(network *net){
     // free the dynamically allocated fields inside the network struct
     for (int i=0; i < net->num_layers; i++){
         
         for(int j=0; j< net->layers[i].num_neurons; j++){
             free(net->layers[i].neurons[j].weights);
-            if ((i > 0) && (i < net->num_layers - 1)) {
-                //free(rand_indices[1][i][j]); //individual ws indices
-            }
-        }
-        if (i < net->num_layers - 1) {
-            //free(*rand_indices[0][i]);  //ns
-            //free(rand_indices[1][i]);   //ws
         }
         free(net->layers[i].neurons);
     }
     free(net->layers);
-    //free(net); net is stack allocated as of right now
 }
 
-
+/** 
+* @brief
+* Shuffles the array using the Fisher-Yates shuffle
+*/
 void shuffleArray(int arr[], int size){
     srand(time(NULL));
     for (int i = size - 1; i > 0; i--) {
@@ -76,15 +41,27 @@ int* get_random_indices(int size){
     return arr;
 }
 
-neuron create_neuron(int num_out_weights){
+void print_network(network net){
+
+    printf("Network - num_layers = %d\n", net.num_layers);
+    printf("----------------------------\n");
+    for (int i = 0; i < net.num_layers; i++){
+        printf("Layer %d:\n", i);
+        for (int j = 0; j < net.layers[i].num_neurons; j++){
+            printf("\tNeuron %d a=%f z=%f\n", j, net.layers[i].neurons[j].a,  net.layers[i].neurons[j].z );
+        }
+    }
+}
+
+neuron create_neuron(int num_in_weights){
     neuron new_neuron;
     new_neuron.bias = 0.0;
     new_neuron.z = 0.0;
     new_neuron.a = 0.0;
-    new_neuron.weights = (float*) malloc(num_out_weights * sizeof(float));
-    new_neuron.num_weights = num_out_weights;
+    new_neuron.weights = (float*) malloc(num_in_weights * sizeof(float));
+    new_neuron.num_weights = num_in_weights;
 
-    for (int i=0; i<num_out_weights; i++){
+    for (int i=0; i<num_in_weights; i++){
         new_neuron.weights[i] = ((float)rand())/((float)RAND_MAX);
     }
     return new_neuron;
@@ -125,9 +102,30 @@ network construct_network(int num_outputs, int num_layers, int *num_neurons) {
     return net;
 }
 
-void forward_layer(network net, int layer_idx){
-    
+network construct_network2(int num_outputs, int num_layers, int *num_neurons) {
+
+    network net = create_network(num_layers);
+    int curr_layer_idx, curr_neuron_idx;
+    for (curr_layer_idx = 0; curr_layer_idx < num_layers; curr_layer_idx++){
+        net.layers[ curr_layer_idx ] = create_layer(num_neurons[ curr_layer_idx ]);
+    }
+
+    // create neurons for the first (input) layer - they dont have weights
+    for (curr_neuron_idx = 0; curr_neuron_idx < net.layers[0].num_neurons; curr_neuron_idx++){
+        net.layers[0].neurons[ curr_neuron_idx ] = create_neuron(1);
+    }
+
+    // For each following layer create neurons with number of weights eqaual to the number of neurons in the previous layer
+    for (curr_layer_idx = 1; curr_layer_idx < num_layers; curr_layer_idx++){
+        int prev_layer_idx = curr_layer_idx - 1;
+        for (curr_neuron_idx = 0; curr_neuron_idx <net.layers[ curr_layer_idx ].num_neurons; curr_neuron_idx++){
+            net.layers[ curr_layer_idx ].neurons[ curr_neuron_idx ] = create_neuron(net.layers[ prev_layer_idx ].num_neurons);
+        }
+    }
+    return net;
 }
+
+
 
 int ****generate_random_indices(network net) {
     int i, j; //, k;
@@ -160,31 +158,7 @@ int ****generate_random_indices(network net) {
 }
 
 
-int ***generate_random_dummy_operations(network net){
-    int i, j;
-    int ***dummy_ops = malloc((net.num_layers - 1) * sizeof(int**));
-
-    for (i=1; i<net.num_layers; i++){
-        int **layer_wise_dummy_ops = malloc((net.layers[i].num_neurons) * sizeof(int*));
-        // for each neuron in this layer
-        for (j=0; j<net.layers[i].num_neurons; j++){
-            int *neuron_wise_dummy_ops_indices = get_random_binary_indices(net.layers[i - 1].num_neurons);
-            layer_wise_dummy_ops[j] = neuron_wise_dummy_ops_indices;
-        }
-        dummy_ops[i - 1] = layer_wise_dummy_ops;
-    }
-    return dummy_ops;
-}
-
-int* get_random_binary_indices(int size){
-    int *indices;
-    for (int i=0; i<size; i++){
-        indices[i] = rand() % 2;
-    }
-    return indices;
-}
-
-void forward_shuffled_NO(network net, int**** random_indices, int dummy_operations) {
+void forward_shuffled_NO(network net, int**** random_indices) {
     //int i, j, k,
     int nidx = 0;
     int *rand_n_idx, *rand_w_idx;
@@ -196,15 +170,18 @@ void forward_shuffled_NO(network net, int**** random_indices, int dummy_operatio
     // for each layer
     for (volatile int i=1; i<net.num_layers; i++){
         
+
         rand_n_idx = rand_n_indices[i - 1];
         // for each neuron in this layer
         for (volatile int j=0; j<net.layers[i].num_neurons; j++){
             nidx = rand_n_idx[j];  
+            printf("mmmkay\n");
             net.layers[i].neurons[nidx].z = net.layers[i].neurons[nidx].bias;
-
+            printf("mmmkay\n");
 
             rand_w_idx = rand_ws_indices[i - 1][j];
             // for all neurons on the previous layer
+            
             for (volatile int k=0; k<net.layers[i - 1].num_neurons; k++){
                 
                 net.layers[i].neurons[nidx].z = net.layers[i].neurons[nidx].z +
@@ -230,19 +207,10 @@ void forward_shuffled_NO(network net, int**** random_indices, int dummy_operatio
                 net.layers[i].neurons[nidx].a = 1/(1+exp(-net.layers[i].neurons[nidx].z));
             }
         }
-
-        //OPTIONAL DUMMY OPERATIONS
-        //if (dummy_operations > 0){
-        //    for (volatile int dummy_i = 0; dummy_i<10; dummy_i++) {
-        //        result = scmd *scmd;
-        //        result = scmd *scmd;
-        //        result = scmd *scmd;
-        //    }
-        //}   
     }
 }
 
-void forward_shuffled_NO_AAE(network net, int**** random_indices, int dummy_operations) {
+void forward_shuffled_NO_AAE(network net, int**** random_indices) {
     //int i, j, k,
     int nidx = 0;
     int *rand_n_idx, *rand_w_idx;
@@ -271,13 +239,6 @@ void forward_shuffled_NO_AAE(network net, int**** random_indices, int dummy_oper
             }
             //get a values
             net.layers[i].neurons[nidx].a = net.layers[i].neurons[nidx].z;
-            //if (dummy_operations > 1){
-            //for (volatile int dummy_i = 0; dummy_i<50; dummy_i++) {
-            //    result = scmd *scmd;
-            //    result = scmd *scmd;
-            //    result = scmd *scmd;
-            //}
-            //} 
         }
 
         for (volatile int j=0; j<net.layers[i].num_neurons; j++) {
@@ -298,18 +259,10 @@ void forward_shuffled_NO_AAE(network net, int**** random_indices, int dummy_oper
                 net.layers[i].neurons[nidx].a = 1/(1+exp(-net.layers[i].neurons[nidx].z));
             }
         }
-        //OPTIONAL DUMMY OPERATIONS
-        //if (dummy_operations > 0){
-        //    for (volatile int dummy_i = 0; dummy_i<50; dummy_i++) {
-        //        result = scmd *scmd;
-        //        result = scmd *scmd;
-        //        result = scmd *scmd;
-        //    }
-        //} 
     }
 }
 
-void forward_shuffled(network net, int dummy_operations) {
+void forward_shuffled(network net) {
     int i, j, k, nidx;
     int *rand_n_idx, *rand_w_idx;
     //uint8_t result, scmd = 16;
@@ -350,18 +303,10 @@ void forward_shuffled(network net, int dummy_operations) {
                 net.layers[i].neurons[nidx].a = 1/(1+exp(-net.layers[i].neurons[nidx].z));
             }
         }
-        //OPTIONAL DUMMY OPERATIONS
-        //if (dummy_operations > 0){
-        //    for (volatile int dummy_i = 0; dummy_i<10; dummy_i++) {
-        //        result = scmd *scmd;
-        //        result = scmd *scmd;
-        //        result = scmd *scmd;
-        //    }
-        //}
     }
 }
 
-void forward(network net, int dummy_operations){
+void forward(network net){
     volatile int i, j, k;
     //uint8_t result, scmd = 16;
     // for each layer
@@ -396,15 +341,52 @@ void forward(network net, int dummy_operations){
                 net.layers[i].neurons[j].a = 1/(1+exp(-net.layers[i].neurons[j].z));
             }
         }
-        //OPTIONAL DUMMY OPERATIONS
-        //if (dummy_operations > 0){
-        //    for (volatile int dummy_i = 0; dummy_i<10; dummy_i++) {
-        //        result = scmd *scmd;
-        //        result = scmd *scmd;
-        //        result = scmd *scmd;
-        //    }
-        //}
     }
+}
+
+network forward2(network net){
+    volatile int curr_layer_idx, curr_neuron_idx, prev_layer_neuron_idx;
+    //uint8_t result, scmd = 16;
+    // for each layer
+    for (curr_layer_idx=1; curr_layer_idx < net.num_layers; curr_layer_idx++){
+        
+        int prev_layer_idx = curr_layer_idx - 1;
+        // for each neuron in this layer
+        for (curr_neuron_idx=0; curr_neuron_idx < net.layers[ curr_layer_idx ].num_neurons; curr_neuron_idx++){   
+            net.layers[ curr_layer_idx ].neurons[ curr_neuron_idx ].z = net.layers[ curr_layer_idx ].neurons[ curr_neuron_idx ].bias;
+
+            // for all neurons on the previous layer
+            for (prev_layer_neuron_idx = 0; prev_layer_neuron_idx <net.layers[ prev_layer_idx ].num_neurons; prev_layer_neuron_idx++){
+                net.layers[ curr_layer_idx ].neurons[ curr_neuron_idx ].z =
+                    net.layers[ curr_layer_idx ].neurons[ curr_neuron_idx ].z
+                    +
+                    (
+                        (net.layers[ curr_layer_idx ].neurons[ curr_neuron_idx ].weights[ prev_layer_neuron_idx ])
+                        *
+                        (net.layers[ prev_layer_idx ].neurons[ prev_layer_neuron_idx ].a)
+                    );
+                // We are looking for THIS MULTIPLICATION
+            }
+            //get a values
+            net.layers[curr_layer_idx].neurons[ curr_neuron_idx ].a = net.layers[curr_layer_idx].neurons[ curr_neuron_idx ].z;
+            //apply relu
+            if(curr_layer_idx < net.num_layers-1){
+                if((net.layers[curr_layer_idx].neurons[ curr_neuron_idx ].z) < 0)
+                {
+                    net.layers[curr_layer_idx].neurons[ curr_neuron_idx ].a = 0;
+                }
+                else
+                {
+                    net.layers[curr_layer_idx].neurons[ curr_neuron_idx ].a = net.layers[curr_layer_idx].neurons[ curr_neuron_idx ].z;
+                }
+            }
+            //apply sigmoid to the last layer
+            else{
+                net.layers[curr_layer_idx].neurons[ curr_neuron_idx ].a = 1/(1+exp(-net.layers[curr_layer_idx].neurons[ curr_neuron_idx ].z));
+            }
+        }
+    }
+    return net;
 }
 
 void forward_shuffled_NO_AAE_RDO(network net, int**** random_indices, int ***random_dummy_operations) {

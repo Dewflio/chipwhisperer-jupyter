@@ -74,14 +74,27 @@ void simpleserial_addcmd(uint8_t cmd, uint8_t len, uint8_t (*f)(uint8_t cmd, uin
 }
 void simpleserial_get(uint8_t cmd, uint8_t len, uint8_t (*f)(uint8_t cmd, uint8_t scmd, uint8_t len, uint8_t *buf)) {
     // Put your debug code here
-    printf("Debugging...\n");
+    printf("Debugging started!\n");
     
     uint8_t cmd2 = 'p';
     uint8_t scmd2 = 'p';
-    uint8_t len2 = 16; 
-    uint8_t *buf2 = malloc(len2 * sizeof(uint8_t));
-    printf("Arguments declared\n");
-    handle(cmd2, scmd2, len2, buf2);
+    uint8_t len2 = 4; 
+    float value = 0.657f;
+    uint8_t buffer[4];  // 4-byte buffer
+
+    // Copy the float's bytes into the buffer using pointer casting
+    uint8_t *float_as_bytes = (uint8_t*)&value;
+    for (int i = 0; i < 4; i++) {
+        buffer[i] = float_as_bytes[i];
+    }
+
+    handle(cmd2, scmd2, len2, buffer);
+
+    // handle(cmd2, scmd2, len2, buf2);
+
+    // handle(cmd2, scmd2, len2, buf2);
+
+    printf("Debugging ended!\n");
 
     exit(0);
 }
