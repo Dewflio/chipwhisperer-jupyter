@@ -45,3 +45,5 @@ html/*
 jupyter-backup/*
 test.ipynb
 /tests/*.out
+
+*.exe
