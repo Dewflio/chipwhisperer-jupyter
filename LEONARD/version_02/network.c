@@ -56,13 +56,30 @@ void print_network(network net){
 neuron create_neuron(int num_in_weights){
     neuron new_neuron;
     new_neuron.bias = 0.0;
-    new_neuron.z = 0.0;
-    new_neuron.a = 0.0;
+    new_neuron.z = 0.5;
+    new_neuron.a = 0.5;
     new_neuron.weights = (float*) malloc(num_in_weights * sizeof(float));
     new_neuron.num_weights = num_in_weights;
 
     for (int i=0; i<num_in_weights; i++){
         new_neuron.weights[i] = ((float)rand())/((float)RAND_MAX);
+    }
+    return new_neuron;
+}
+
+neuron create_neuron2(void* weights, int num_in_weights, int layer_idx, int neuron_idx){
+    neuron new_neuron;
+    new_neuron.bias = 0.0;
+    new_neuron.z = 0.0;
+    new_neuron.a = 0.0;
+    new_neuron.weights = (float*) malloc(num_in_weights * sizeof(float));
+    new_neuron.num_weights = num_in_weights;
+    
+    //TODO: Dont question it... it works.
+    float (*layer_weights)[num_in_weights] = ((float (*)[num_in_weights])((float**)weights)[layer_idx]);
+
+    for (int i=0; i<num_in_weights; i++){
+        new_neuron.weights[i] = layer_weights[neuron_idx][i];
     }
     return new_neuron;
 }
@@ -102,7 +119,7 @@ network construct_network(int num_outputs, int num_layers, int *num_neurons) {
     return net;
 }
 
-network construct_network2(int num_outputs, int num_layers, int *num_neurons) {
+network construct_network2(int num_layers, int *num_neurons, void* weights) {
 
     network net = create_network(num_layers);
     int curr_layer_idx, curr_neuron_idx;
@@ -118,8 +135,13 @@ network construct_network2(int num_outputs, int num_layers, int *num_neurons) {
     // For each following layer create neurons with number of weights eqaual to the number of neurons in the previous layer
     for (curr_layer_idx = 1; curr_layer_idx < num_layers; curr_layer_idx++){
         int prev_layer_idx = curr_layer_idx - 1;
+
+        // pointer to this layers weights
+
         for (curr_neuron_idx = 0; curr_neuron_idx <net.layers[ curr_layer_idx ].num_neurons; curr_neuron_idx++){
-            net.layers[ curr_layer_idx ].neurons[ curr_neuron_idx ] = create_neuron(net.layers[ prev_layer_idx ].num_neurons);
+            net.layers[ curr_layer_idx ].neurons[ curr_neuron_idx ] = 
+                //create_neuron(net.layers[ prev_layer_idx ].num_neurons);
+                create_neuron2(weights, net.layers[ prev_layer_idx ].num_neurons, curr_layer_idx, curr_neuron_idx );
         }
     }
     return net;
@@ -175,9 +197,9 @@ void forward_shuffled_NO(network net, int**** random_indices) {
         // for each neuron in this layer
         for (volatile int j=0; j<net.layers[i].num_neurons; j++){
             nidx = rand_n_idx[j];  
-            printf("mmmkay\n");
+            //printf("mmmkay\n");
             net.layers[i].neurons[nidx].z = net.layers[i].neurons[nidx].bias;
-            printf("mmmkay\n");
+            //printf("mmmkay\n");
 
             rand_w_idx = rand_ws_indices[i - 1][j];
             // for all neurons on the previous layer
@@ -417,7 +439,7 @@ void forward_shuffled_NO_AAE_RDO(network net, int**** random_indices, int ***ran
 
             // for all neurons on the previous layer
             for (volatile int k=0; k<net.layers[i - 1].num_neurons; k++){
-                printf("OK3\n");
+                //printf("OK3\n");
                 net.layers[i].neurons[nidx].z = net.layers[i].neurons[nidx].z +
                 ((net.layers[i-1].neurons[rand_w_idx[k]].weights[nidx]) * (net.layers[i-1].neurons[rand_w_idx[k]].a));
                 // We are looking for THIS MULTIPLICATION

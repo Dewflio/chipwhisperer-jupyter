@@ -58,13 +58,14 @@ void print_network(network net);
 void free_network(network *net);
 
 neuron create_neuron(int num_out_weights);
+neuron create_neuron2(void* weights, int num_out_weights, int layer_idx, int neuron_idx);
 
 layer create_layer(int num_neurons);
 
 network create_network(int num_layers);
 
 network construct_network(int num_outputs, int num_layers, int *num_neurons);
-network construct_network2(int num_outputs, int num_layers, int *num_neurons);
+network construct_network2(int num_layers, int *num_neurons, void* weights);
 
 void forward(network net);
 network forward2(network net);

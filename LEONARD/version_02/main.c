@@ -9,6 +9,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "network.h"
+#include "network_config.h"
 
 #include "hal/hal.h"
 #include "hal/stm32f3/stm32f3_hal.h"
@@ -25,8 +26,11 @@
 /// differences between different scmd values.
 uint8_t handle(uint8_t cmd, uint8_t scmd, uint8_t len, uint8_t *buf)
 {
-  int arr[6] = {7,5,4,3, 4, 5};
-  network net = construct_network2(5, 6, arr);
+
+  int num_layers = NET_NUM_LAYERS;
+  int *num_neurons_arr = NET_NUM_NEURONS;
+  init_weights();
+  network net = construct_network2(num_layers, num_neurons_arr, net_config_layer_weights);
   
   //Change the input of the first neuron in the first layer to the provided number
   //convert to float
@@ -44,9 +48,6 @@ uint8_t handle(uint8_t cmd, uint8_t scmd, uint8_t len, uint8_t *buf)
   // Start measurement.
   trigger_high();
 
-  //#ifdef DEBUGGING
-  //printf("Running foward...\n");
-  //#endif
   net = forward2(net);
   //forward(net);
   //forward_shuffled(net);
@@ -57,7 +58,19 @@ uint8_t handle(uint8_t cmd, uint8_t scmd, uint8_t len, uint8_t *buf)
   trigger_low();
 
   #ifdef DEBUGGING
+  //print network (a, z values)
   print_network(net);
+  //print weights
+  for (int j = 1; j < num_layers; j++){
+    printf("Layer %d:\n", j);
+    for (int i=0; i<num_neurons_arr[j]; i++){
+      for (int k=0; k<num_neurons_arr[j - 1]; k++){
+        printf("\tw%d: %f", i, net.layers[j].neurons[i].weights[k]);
+      }
+      printf("\n");
+    }
+  }
+  
   #endif
   
   //free dynamically allocated memory
