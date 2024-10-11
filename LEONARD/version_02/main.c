@@ -40,7 +40,9 @@ uint8_t handle(uint8_t cmd, uint8_t scmd, uint8_t len, uint8_t *buf)
   net.layers[0].neurons[0].a = input_value;
 
   #ifdef DEBUGGING
+  #if 0
   print_network(net);
+  #endif
   #endif
   //int ****random_indices = generate_random_indices(net);
   //int ***random_dummy_operations_indices = generate_random_dummy_operations(net);
@@ -58,6 +60,7 @@ uint8_t handle(uint8_t cmd, uint8_t scmd, uint8_t len, uint8_t *buf)
   trigger_low();
 
   #ifdef DEBUGGING
+  #if 0
   //print network (a, z values)
   print_network(net);
   //print weights
@@ -70,7 +73,7 @@ uint8_t handle(uint8_t cmd, uint8_t scmd, uint8_t len, uint8_t *buf)
       printf("\n");
     }
   }
-  
+  #endif
   #endif
   
   //free dynamically allocated memory
