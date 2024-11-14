@@ -4,9 +4,11 @@ import cupy as cp
 import struct
 import time
 import math
+import argparse
 from datetime import datetime
 from decimal import Decimal
 from concurrent.futures import ProcessPoolExecutor, as_completed
+
 #import multiprocessing as mp
 
 def float_to_binary_str(f):
@@ -20,6 +22,20 @@ def HW_float32(f):
     binary_str = float_to_binary_str(f)
     # Count and return the number of '1' bits
     return binary_str.count('1')
+
+def HW_float32_vectorized(floats_arr):
+
+    #floats_arr = cp.array(floats_arr, dtype=cp.float32)
+
+    int_view = floats_arr.view(cp.uint32)
+
+    hw_counts = cp.zeros(int_view.shape, dtype=cp.uint32)
+    for i in range(32):  # Iterate over each bit position
+        hw_counts += (int_view >> i) & 1
+    
+    return hw_counts
+
+
 
 def get_weights_arr():
     weights_arr = []
@@ -41,19 +57,22 @@ class CPA_Attack_Obj:
         self.hypothetical_products_allw = []
         self.average_hypothetical_leakages_allw = []
 
+        #self.compute_hypotheticals()
+
         self.M = len(self.trace_waves)
         self.N = len(self.weights)
 
-        self.trace_waves_gpu = cp.array(self.trace_waves)
-        self.inputs_gpu = cp.array(self.inputs)
-        self.weights_gpu = cp.array(self.weights)
+        self.trace_waves_gpu = cp.array(np.array(self.trace_waves), dtype=cp.float32)
+        self.inputs_gpu = cp.array(np.array(self.inputs), dtype=cp.float32)
+        self.weights_gpu = cp.array(np.array(self.weights), dtype=cp.float32)
 
-        # Calculate hypothetical products and leakages
+        # Intermediate results for the GPU
         self.hypothetical_products_gpu = cp.outer(self.weights_gpu, self.inputs_gpu)  # Shape (N, M)
-        self.hypothetical_leakages_gpu = cp.vectorize(HW_float32)(self.hypothetical_products_gpu)
+        self.hypothetical_leakages_gpu = HW_float32_vectorized(self.hypothetical_products_gpu)#cp.array(self.hypothetical_products_allw, dtype=cp.float32) #cp.vectorize(HW_float32)(self.hypothetical_products_gpu)
         self.average_hypothetical_leakage_gpu = cp.mean(self.hypothetical_leakages_gpu, axis=1)  # Shape (N,)
 
     def compute_hypotheticals(self):
+        print(f'computing hypotheticals...')
         self.hypothetical_leakages_allw = []
         self.hypothetical_products_allw = []
         self.average_hypothetical_leakages_allw = []
@@ -155,18 +174,18 @@ class CPA_Attack_Obj:
             den1 = cp.sqrt(cp.sum((self.hypothetical_leakages_gpu[i] - self.average_hypothetical_leakage_gpu[i]) ** 2))
             den2 = cp.sqrt(cp.sum((self.trace_waves_gpu[:, time_sample_index] - average_leakage) ** 2))
 
-        # Compute correlation coefficient
-        r_abs[i] = cp.abs(num / (den1 * den2))
+            # Compute correlation coefficient
+            r_abs[i] = cp.abs(num / (den1 * den2))
 
         # Convert result back to CPU (optional, if you need it on CPU)
-        return r_abs.get(), time_sample_index
+        return r_abs.get()
     
 def run_parallel_CPA_attack(cpa_attack_instance, start_time_sample, n_time_samples):
     start = time.time()
     num_completed = 0
 
     with ProcessPoolExecutor(max_workers=8) as executor:
-        futures = {executor.submit(cpa_attack_instance.CPA_attack_gpu, i): i for i in range(start_time_sample, start_time_sample + n_time_samples)}
+        futures = {executor.submit(cpa_attack_instance.CPA_attack, i): i for i in range(start_time_sample, start_time_sample + n_time_samples)}
     
         results = [None] * n_time_samples
         
@@ -183,8 +202,49 @@ def run_parallel_CPA_attack(cpa_attack_instance, start_time_sample, n_time_sampl
 
     return results
 
-if __name__ == "__main__":        
-    proj = cw.open_project('project-06')
+def run_gpu_CPA_attack(cpa_attack_instance, start_time_sample, n_time_samples):
+    print("runnning the CPA on gpu...")
+    start = time.time()
+    num_completed = 0
+    results = [None] * n_time_samples
+
+    for i in range(start_time_sample, start_time_sample + n_time_samples):
+        r_abs = cpa_attack_instance.CPA_attack_gpu(i)
+    
+        results[i - start_time_sample] = r_abs
+        num_completed += 1
+        if num_completed % 100 == 0:
+            print(f'completed {num_completed} time samples in {(time.time() - start)} seconds total')
+
+    
+    end = time.time()
+    print('\nCPA on GPU finished!')
+    print(f'total time elapsed:\t{end - start}\n')
+
+    return results
+
+if __name__ == "__main__":
+    argument_parser = argparse.ArgumentParser(description="Description of your script")
+
+    # Add arguments
+    argument_parser.add_argument('--save-res', action='store_true', help="if this is set the results of the attack are saved using npy")
+    argument_parser.add_argument('--src-proj', type=str, default="project-06", help="name of the cwp project to use as the data source default='project-06'")
+    argument_parser.add_argument('--start-ts', type=int, default=400, help="the starting time sample in the analysis default=400")
+    argument_parser.add_argument('--n-ts', type=int, default=1000, help="number of time samples to analyse default=4000")
+    
+
+    # Parse the arguments
+    args = argument_parser.parse_args()
+
+    print(args)
+    save_results = args.save_res
+    proj_name = args.src_proj
+    start_time_sample = args.start_ts
+    n_time_samples = args.n_ts
+
+    
+
+    proj = cw.open_project(proj_name)
     trace_waves_arr = []
     inputs_arr = []
     for trace in proj.traces:
@@ -203,18 +263,14 @@ if __name__ == "__main__":
     print(f"number of inputs:\t{len(inputs_arr)}")
     print(f"number of weights:\t{len(weights_arr)}")
 
-    r_abs_all_time_samples = []
-    start_time_sample = 400
-    n_time_samples = 100
+    
 
     cpaa_obj = CPA_Attack_Obj(trace_waves=trace_waves_arr, inputs=inputs_arr, weights=weights_arr)
-    print(f'computing hypotheticals...')
-    cpaa_obj.compute_hypotheticals()
-    print(f'running the attack...')
 
-    r_abs_all_time_samples = run_parallel_CPA_attack(cpa_attack_instance=cpaa_obj, start_time_sample=start_time_sample, n_time_samples=n_time_samples)
+    #r_abs_all_time_samples = run_parallel_CPA_attack(cpa_attack_instance=cpaa_obj, start_time_sample=start_time_sample, n_time_samples=n_time_samples)
+    r_abs = run_gpu_CPA_attack(cpa_attack_instance=cpaa_obj, start_time_sample=start_time_sample, n_time_samples=n_time_samples)
 
-    print(f'number of r absolute arrays (should match num of traces):\t{len(r_abs_all_time_samples)}')
+    print(f'number of r absolute arrays (should match num of traces):\t{len(r_abs)}')
 
 
     # Construct correlation graphs for each weight value
@@ -223,7 +279,7 @@ if __name__ == "__main__":
     for i in range(len(weights_arr)):
         corr_graph = []
         for u in range(n_time_samples):
-            corr_graph.append(r_abs_all_time_samples[u][i])
+            corr_graph.append(r_abs[u][i])
         corr_graphs.append(corr_graph)
 
     print(f'getting the maxumal correlation coefficient graphs...')
@@ -244,10 +300,11 @@ if __name__ == "__main__":
     savefile_r_abs = output_folder + formatted_now + "_r_abs.npy"
     savefile_corr_graphs = output_folder + formatted_now + "_corr_graphs.npy"
 
-    try:
-        print(f'saving r_abs data into {savefile_r_abs}')
-        print(f'saving corr_graphs data into {savefile_corr_graphs}')
-        np.save(savefile_r_abs, np.array(r_abs_all_time_samples))
-        np.save(savefile_corr_graphs, np.array(corr_graphs))
-    except Exception as e:
-        print(e)
+    if save_results:
+        try:
+            print(f'saving r_abs data into {savefile_r_abs}')
+            print(f'saving corr_graphs data into {savefile_corr_graphs}')
+            np.save(savefile_r_abs, np.array(r_abs))
+            np.save(savefile_corr_graphs, np.array(corr_graphs))
+        except Exception as e:
+            print(e)
