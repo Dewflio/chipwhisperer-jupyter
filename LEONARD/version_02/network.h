@@ -46,8 +46,6 @@ typedef struct weight_indices_struct {
         for each neuron in previous layer
 
 */
-
-
 typedef struct random_indices_struct {
     neuron_indices *neuron_indices;
     int ***weight_indices;
@@ -57,38 +55,27 @@ typedef struct random_indices_struct {
 void print_network(network net);
 void free_network(network *net);
 
-neuron create_neuron(int num_out_weights);
-neuron create_neuron2(void* weights, int num_out_weights, int layer_idx, int neuron_idx);
 
+neuron create_neuron(void* weights, int num_out_weights, int layer_idx, int neuron_idx); //legacy - neuron create_neuron(int num_out_weights);
 layer create_layer(int num_neurons);
-
 network create_network(int num_layers);
+network init_network(int num_layers, int *num_neurons, void* weights);  //legacy - network construct_network(int num_outputs, int num_layers, int *num_neurons);
 
-network construct_network(int num_outputs, int num_layers, int *num_neurons);
-network construct_network2(int num_layers, int *num_neurons, void* weights);
-
-void forward(network net);
-network forward2(network net);
+network forward(network net);   //legacy - void forward(network net);
 
 void forward_shuffled(network net);
-
 // No Overhead
 void forward_shuffled_NO(network net, int**** random_indices);
-
 // No Overhead, Activations At the End
 void forward_shuffled_NO_AAE(network net, int**** random_indices);
-
 // No Overhead, Activations At the End, Random Dummy Operations
 void forward_shuffled_NO_AAE_RDO(network net, int**** random_indices, int ***random_dummy_operations);
 
 
 //RANDOM SHUFFLING
 void swap(int *a, int *b);
-
 void shuffleArray(int arr[], int size);
-
 int ****generate_random_indices(network net);
-
 int* get_random_indices(int size);
 
 

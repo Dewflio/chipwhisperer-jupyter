@@ -5,6 +5,11 @@
  * Date: 14th March 2021
  */
 
+/*
+ * When debugging locally compile using `gcc -o debug-app.exe main.c network.c debug-source.c`
+ * optionally include -DDEBUGGING=1
+ */
+
 #include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
@@ -30,7 +35,7 @@ uint8_t handle(uint8_t cmd, uint8_t scmd, uint8_t len, uint8_t *buf)
   int num_layers = NET_NUM_LAYERS;
   int *num_neurons_arr = NET_NUM_NEURONS;
   init_weights();
-  network net = construct_network2(num_layers, num_neurons_arr, net_config_layer_weights);
+  network net = init_network(num_layers, num_neurons_arr, net_config_layer_weights);
   
   //Change the input of the first neuron in the first layer to the provided number
   //convert to float
@@ -46,12 +51,12 @@ uint8_t handle(uint8_t cmd, uint8_t scmd, uint8_t len, uint8_t *buf)
   #endif
   //int ****random_indices = generate_random_indices(net);
   //int ***random_dummy_operations_indices = generate_random_dummy_operations(net);
-  int ***random_dummy_operations_indices = NULL;
+  //int ***random_dummy_operations_indices = NULL;
   // Start measurement.
   trigger_high();
 
-  net = forward2(net);
-  //forward(net);
+  net = forward(net);
+
   //forward_shuffled(net);
   //forward_shuffled_NO(net, random_indices);
   //forward_shuffled_NO_AAE(net, random_indices, 2);
@@ -60,19 +65,9 @@ uint8_t handle(uint8_t cmd, uint8_t scmd, uint8_t len, uint8_t *buf)
   trigger_low();
 
   #ifdef DEBUGGING
-  #if 0
-  //print network (a, z values)
+  #if 1
+  //print network (a, z, and w values)
   print_network(net);
-  //print weights
-  for (int j = 1; j < num_layers; j++){
-    printf("Layer %d:\n", j);
-    for (int i=0; i<num_neurons_arr[j]; i++){
-      for (int k=0; k<num_neurons_arr[j - 1]; k++){
-        printf("\tw%d: %f", i, net.layers[j].neurons[i].weights[k]);
-      }
-      printf("\n");
-    }
-  }
   #endif
   #endif
   

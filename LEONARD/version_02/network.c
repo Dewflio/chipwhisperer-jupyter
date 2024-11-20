@@ -41,46 +41,54 @@ int* get_random_indices(int size){
     return arr;
 }
 
+/*
+* Prints out the values contained withing the network - number of layers, and then for each layer prints out each neuron
+* for each neuron this prints out the a value, the z value, and the weight values (an array of size equal to the number of neurons in the previous layer - except for the first layer - the input layer ) 
+*/
 void print_network(network net){
-
+    printf("\n");
+    printf("-----------------------------------------------------------------------------------------------------------------------------------------------------------------\n");
     printf("Network - num_layers = %d\n", net.num_layers);
-    printf("----------------------------\n");
     for (int i = 0; i < net.num_layers; i++){
         printf("Layer %d:\n", i);
         for (int j = 0; j < net.layers[i].num_neurons; j++){
-            printf("\tNeuron %d a=%f z=%f\n", j, net.layers[i].neurons[j].a,  net.layers[i].neurons[j].z );
+            printf("\tNeuron %d | a=%f z=%f\t| ", j, net.layers[i].neurons[j].a,  net.layers[i].neurons[j].z );
+            
+            if (i >= 1){
+                printf("Weights: ");
+                for (int k = 0; k < net.layers[i - 1].num_neurons; k++){
+                    printf("w%d=%f\t", k, net.layers[i].neurons[j].weights[k]);
+                }
+            }
+            printf("\n");
         }
     }
+    printf("-----------------------------------------------------------------------------------------------------------------------------------------------------------------\n");
 }
 
-neuron create_neuron(int num_in_weights){
+
+neuron create_neuron(void* weights, int num_in_weights, int layer_idx, int neuron_idx){
     neuron new_neuron;
-    new_neuron.bias = 0.0;
-    new_neuron.z = 0.5;
     new_neuron.a = 0.5;
-    new_neuron.weights = (float*) malloc(num_in_weights * sizeof(float));
-    new_neuron.num_weights = num_in_weights;
-
-    for (int i=0; i<num_in_weights; i++){
-        new_neuron.weights[i] = ((float)rand())/((float)RAND_MAX);
-    }
-    return new_neuron;
-}
-
-neuron create_neuron2(void* weights, int num_in_weights, int layer_idx, int neuron_idx){
-    neuron new_neuron;
+    new_neuron.z = 0.5;
     new_neuron.bias = 0.0;
-    new_neuron.z = 0.0;
-    new_neuron.a = 0.0;
     new_neuron.weights = (float*) malloc(num_in_weights * sizeof(float));
     new_neuron.num_weights = num_in_weights;
     
-    //TODO: Dont question it... it works.
-    float (*layer_weights)[num_in_weights] = ((float (*)[num_in_weights])((float**)weights)[layer_idx]);
+    if (weights != NULL){
+        //TODO: Dont question it... it works.
+        float (*layer_weights)[num_in_weights] = ((float (*)[num_in_weights])((float**)weights)[layer_idx]);
 
-    for (int i=0; i<num_in_weights; i++){
-        new_neuron.weights[i] = layer_weights[neuron_idx][i];
+        for (int i=0; i<num_in_weights; i++){
+            new_neuron.weights[i] = layer_weights[neuron_idx][i];
+        }
     }
+    else {
+        for (int i=0; i<num_in_weights; i++){
+            new_neuron.weights[i] = ((float)rand())/((float)RAND_MAX);
+        }
+    }
+    
     return new_neuron;
 }
 
@@ -98,28 +106,7 @@ network create_network(int num_layers){
     return net;
 }
 
-network construct_network(int num_outputs, int num_layers, int *num_neurons) {
-
-    network net = create_network(num_layers);
-    int i, j;
-    for (i=0; i<num_layers; i++){
-        net.layers[i] = create_layer(num_neurons[i]);
-    }
-
-    // For each layer create neurons with number of weights eqaual to the number of neurons in the following layer
-    for (i=1; i<num_layers; i++){
-        for (j=0; j<net.layers[i - 1].num_neurons; j++){
-            net.layers[i - 1].neurons[j] = create_neuron(net.layers[i].num_neurons);
-        }
-    }
-    // Create neurons for the last layer - the number of outputs is given "by the user"
-    for (j=0; j<net.layers[num_layers - 1].num_neurons; j++){
-        net.layers[num_layers - 1].neurons[j] = create_neuron(num_outputs);
-    }
-    return net;
-}
-
-network construct_network2(int num_layers, int *num_neurons, void* weights) {
+network init_network(int num_layers, int *num_neurons, void* weights) {
 
     network net = create_network(num_layers);
     int curr_layer_idx, curr_neuron_idx;
@@ -129,7 +116,7 @@ network construct_network2(int num_layers, int *num_neurons, void* weights) {
 
     // create neurons for the first (input) layer - they dont have weights
     for (curr_neuron_idx = 0; curr_neuron_idx < net.layers[0].num_neurons; curr_neuron_idx++){
-        net.layers[0].neurons[ curr_neuron_idx ] = create_neuron(1);
+        net.layers[0].neurons[ curr_neuron_idx ] = create_neuron(NULL, 1, 0, curr_layer_idx);
     }
 
     // For each following layer create neurons with number of weights eqaual to the number of neurons in the previous layer
@@ -141,7 +128,7 @@ network construct_network2(int num_layers, int *num_neurons, void* weights) {
         for (curr_neuron_idx = 0; curr_neuron_idx <net.layers[ curr_layer_idx ].num_neurons; curr_neuron_idx++){
             net.layers[ curr_layer_idx ].neurons[ curr_neuron_idx ] = 
                 //create_neuron(net.layers[ prev_layer_idx ].num_neurons);
-                create_neuron2(weights, net.layers[ prev_layer_idx ].num_neurons, curr_layer_idx, curr_neuron_idx );
+                create_neuron(weights, net.layers[ prev_layer_idx ].num_neurons, curr_layer_idx, curr_neuron_idx );
         }
     }
     return net;
@@ -323,44 +310,6 @@ void forward_shuffled(network net) {
             //apply sigmoid to the last layer
             else{
                 net.layers[i].neurons[nidx].a = 1/(1+exp(-net.layers[i].neurons[nidx].z));
-            }
-        }
-    }
-}
-
-void forward(network net){
-    volatile int i, j, k;
-    //uint8_t result, scmd = 16;
-    // for each layer
-    for (i=1; i<net.num_layers; i++){
-        
-        // for each neuron in this layer
-        for (j=0; j<net.layers[i].num_neurons; j++){   
-            net.layers[i].neurons[j].z = net.layers[i].neurons[j].bias;
-
-            // for all neurons on the previous layer
-            for (k=0; k<net.layers[i - 1].num_neurons; k++){
-                net.layers[i].neurons[j].z = net.layers[i].neurons[j].z +
-                ((net.layers[i-1].neurons[k].weights[j]) * (net.layers[i-1].neurons[k].a));
-                // We are looking for THIS MULTIPLICATION
-            }
-            //get a values
-            net.layers[i].neurons[j].a = net.layers[i].neurons[j].z;
-            //apply relu
-            if(i < net.num_layers-1){
-                if((net.layers[i].neurons[j].z) < 0)
-                {
-                    net.layers[i].neurons[j].a = 0;
-                }
-
-                else
-                {
-                    net.layers[i].neurons[j].a = net.layers[i].neurons[j].z;
-                }
-            }
-            //apply sigmoid to the last layer
-            else{
-                net.layers[i].neurons[j].a = 1/(1+exp(-net.layers[i].neurons[j].z));
             }
         }
     }
