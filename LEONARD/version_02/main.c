@@ -6,8 +6,7 @@
  */
 
 /*
- * When debugging locally compile using `gcc -o debug-app.exe main.c network.c debug-source.c`
- * optionally include -DDEBUGGING=1
+ * When debugging locally compile using `gcc -o debug-app.exe main.c network.c debug-source.c -DDEBUGGING=1`
  */
 
 #include <stdint.h>
@@ -19,11 +18,10 @@
 #include "hal/hal.h"
 #include "hal/stm32f3/stm32f3_hal.h"
 
-
-
 #define SS_VER SS_VER_2_1
 
 #include "simpleserial/simpleserial.h"
+
 
 /// This function will handle the 'p' command send from the capture board.
 /// It returns the squared version of the scmd given.
@@ -34,7 +32,8 @@ uint8_t handle(uint8_t cmd, uint8_t scmd, uint8_t len, uint8_t *buf)
 
   int num_layers = NET_NUM_LAYERS;
   int *num_neurons_arr = NET_NUM_NEURONS;
-  init_weights();
+  srand(time(NULL));
+  
   network net = init_network(num_layers, num_neurons_arr, net_config_layer_weights);
   
   //Change the input of the first neuron in the first layer to the provided number
@@ -55,7 +54,7 @@ uint8_t handle(uint8_t cmd, uint8_t scmd, uint8_t len, uint8_t *buf)
   // Start measurement.
   trigger_high();
 
-  net = forward(net);
+  net = forward_shuffled(net);
 
   //forward_shuffled(net);
   //forward_shuffled_NO(net, random_indices);
@@ -79,15 +78,9 @@ uint8_t handle(uint8_t cmd, uint8_t scmd, uint8_t len, uint8_t *buf)
   return 0;
 }
 
-uint8_t test_handle(uint8_t cmd, uint8_t scmd, uint8_t len, uint8_t *buf)
-{
-  uint8_t *out_buf = buf;
-
-  simpleserial_put('r', len, out_buf);
-  return 0;
-}
-
 int main(void) {
+  //Initialize network weights
+  init_weights();
   // Setup the specific chipset.
   platform_init();
   // Setup serial communication line.
@@ -99,7 +92,6 @@ int main(void) {
 
   // Insert your handlers here.
   simpleserial_addcmd('p', 16, handle);
-  simpleserial_addcmd('x', 16, test_handle);
 
   // What for the capture board to send commands and handle them.
   while (1)

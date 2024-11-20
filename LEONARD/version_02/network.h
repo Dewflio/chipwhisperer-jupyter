@@ -8,6 +8,8 @@ typedef struct neuron_struct {
     float bias;
     float z;
     float a;
+
+    int *mul_indices;
 } neuron;
 
 typedef struct layer_struct {
@@ -62,21 +64,22 @@ network create_network(int num_layers);
 network init_network(int num_layers, int *num_neurons, void* weights);  //legacy - network construct_network(int num_outputs, int num_layers, int *num_neurons);
 
 network forward(network net);   //legacy - void forward(network net);
+network forward_shuffled(network net);
 
-void forward_shuffled(network net);
+//void forward_shuffled(network net);
 // No Overhead
-void forward_shuffled_NO(network net, int**** random_indices);
+//void forward_shuffled_NO(network net, int**** random_indices);
 // No Overhead, Activations At the End
-void forward_shuffled_NO_AAE(network net, int**** random_indices);
+//void forward_shuffled_NO_AAE(network net, int**** random_indices);
 // No Overhead, Activations At the End, Random Dummy Operations
-void forward_shuffled_NO_AAE_RDO(network net, int**** random_indices, int ***random_dummy_operations);
+//void forward_shuffled_NO_AAE_RDO(network net, int**** random_indices, int ***random_dummy_operations);
 
 
 //RANDOM SHUFFLING
 void swap(int *a, int *b);
 void shuffleArray(int arr[], int size);
-int ****generate_random_indices(network net);
 int* get_random_indices(int size);
+//int ****generate_random_indices(network net);
 
 
 
